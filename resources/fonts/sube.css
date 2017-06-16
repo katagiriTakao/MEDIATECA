@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'sube';
+  src:  url('sube.eot?ebvw28');
+  src:  url('sube.eot?ebvw28#iefix') format('embedded-opentype'),
+    url('sube.ttf?ebvw28') format('truetype'),
+    url('sube.woff?ebvw28') format('woff'),
+    url('sube.svg?ebvw28#sube') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sube' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size:30px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-thin-up:before {
+  content: "\e900";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-google-plus3:before {
+  content: "\ea8d";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-rss2:before {
+  content: "\ea9c";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-blogger2:before {
+  content: "\eab8";
+}

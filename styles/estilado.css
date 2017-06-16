@@ -1,0 +1,90 @@
+.social{
+	
+	position:fixed;
+	right:0;
+	top:120px;
+	z-index:2000;
+}
+.social ul{
+	
+	list-style:none;	
+}
+.social ul li a{
+	
+	display:inline-block;
+	color:white;
+	background:black;
+	padding:5px 10px;
+	text-decoration:none;	
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+.social ul li .icon-facebook2{background:#3b5998;}
+.social ul li .icon-twitter{background:#00abf0;}
+.social ul li .icon-youtube{background:#ae181f;}
+.social ul li .icon-google-plus3{background:#d95232;}
+.social ul li .icon-rss2{background:orange;}
+.social ul li .icon-blogger2{background:#D35400;}
+
+.social ul li a:hover{
+	margin-left:-40px;
+	padding:10px 30px;	
+}
+
+.titulo{
+		font-family:monospace;
+		font-size:40px;
+		text-align:center;
+		margin:30px;
+		color:#1F618D;
+}
+#profesores{
+		font-family:monospace;
+		font-size:40px;
+		text-align:center;
+		margin:30px;
+		color:#CB4335  ;
+		
+}
+h1{
+	
+	font-family:monospace;
+	font-size:30px;
+	color:red;
+	text-align:center;
+}
+#ul{
+	
+	position:relative;
+	top:50px;
+	padding:10px 30px;
+	margin:60px;
+
+}
+
+.ir-arriba {
+	display:none;
+	padding:15px;
+	background:#024959;
+	/*border-radius:10px;
+	font-size:70px;*/
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+.modal{
+	
+ width: 40% !important 
+	
+}
+
+td:hover
+{
+    
+    background:navy;    
+}
+
+
