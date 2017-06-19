@@ -231,13 +231,18 @@
 											<div class="row">
 												<p id='sept'></p>
 												<p id='oct'></p>
+											</div> 
+											<div class="row">
+												<p id='nov'></p>
+												<p id='dec'></p>
 											</div>  
+
 										</div>  
 										<div class="col s12 hide" id="secProf">      
 											<div class="row">
 												<h6 class="titulo">PROFESORES</h6>
-													<p id='nov'></p>
-													<p id ='deca'></p>
+													<p id='primerPr'></p>
+													<p id='segundoPr'></p>
 											</div>  
 										</div>      
                                         <div class="row">
@@ -345,7 +350,7 @@
                                                                                 </div>
                                                                         </div>
                                                                 */
-
+                                                                										  var apren = new carta('https://www.intelligent.com/wp-content/uploads/2013/06/chapter_pic02-1.jpg','APRENDIZAJE AUTODIRIGIDO','plan.php')
                                                                                                           var taller = new carta('http://www.mediateca.prepa6.unam.mx/laboratorios/imgs/LI1.jpg','TALLERES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/Programa1.pdf');  
                                                                                                           var audio = new carta('http://planetalibro.net/img/audiolibros.jpg','AUDIOLIBROS','http://www.mediateca.prepa6.unam.mx/?page_id=239');
 
@@ -371,8 +376,15 @@
                                                                 $('#sexto').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+encu.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+encu.titu+'</p></div><div class="card-action"><a href="'+encu.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');        
                                                                 $('#sept').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+certif.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+certif.titu+'</p></div><div class="card-action"><a href="'+certif.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');                        
                                                                 $('#oct').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+beca.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+beca.titu+'</p></div><div class="card-action"><a href="'+beca.accion+'"  class="indigo-text">ENTRA</a></div></div></div></div>');
-                                                                $('#nov').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+becaProf.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+becaProf.titu+'</p></div><div class="card-action"><a href="'+becaProf.accion+'" class="indigo-text">ENTRA</a></div></div></div></div>');
-                                                                $('#deca').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+semProf.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+semProf.titu+'</p></div><div class="card-action"><a href="'+semProf.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                                $('#nov').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+apren.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+apren.titu+'</p></div><div class="card-action"><a href="'+apren.accion+'"  class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                               
+
+
+
+                                                                $('#primerPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+becaProf.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+becaProf.titu+'</p></div><div class="card-action"><a href="'+becaProf.accion+'" class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                                $('#segundoPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+semProf.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+semProf.titu+'</p></div><div class="card-action"><a href="'+semProf.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                                
+
                                                                 $('#mater').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+mater.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+mater.titu+'</p></div><div class="card-action"><a href="'+mater.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
                                                                 $('#plan').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+plan.image+'" height="150px"></div><div class="card-stacked"><div class="card-content"><p>'+plan.titu+'</p></div><div class="card-action"><a href="'+plan.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');                        
 
