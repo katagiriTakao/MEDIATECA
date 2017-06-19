@@ -9,7 +9,7 @@ echo
 			<div class='col s12 m6 offset-m3'>
 			  <div class='card card-panel hoverable'>
 				<div class='card-image'>
-				  <img src='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/01/JEA.jpg'>
+				  <img src='http://www.dgri.sep.gob.mx/images/img_jea.png'>
 				  <span class='card-title'>Jovenes en Acción</span>
 				</div>
 				<div class='card-content'>
@@ -27,7 +27,7 @@ echo"<center>
 			<div class='col s12 m6 offset-m3'>
 			  <div class='card '>
 				<div class='card-image'>
-				  <img src='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/01/GoetheIN.png'>
+				  <img src='https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Goethe-Institut_logo.svg/425px-Goethe-Institut_logo.svg.png'>
 				  <span class='card-title'>Becas de Aleman</span>
 				</div>
 				<div class='card-content'>
