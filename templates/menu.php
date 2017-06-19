@@ -23,7 +23,7 @@ echo  "<!DOCTYPE html>
 			//------Menu estatico----------------------------------------------------------------------------->
 echo			"<body>
 												<nav class='nav-extended'>
-													<div class='nav-wrapper light-blue darken-4' style='height:120px;'>
+													<div class='nav-wrapper light-blue darken-1' style='height:120px;'>
 														
 															<a href='https://www.unam.mx/' target='_blank' class='brand-logo hide-on-med-and-down'><img src='https://www.unam.mx/sites/all/themes/unam/logo.png' height='120px' /></a>
 															<a href='index.html' class='brand-logo right hide-on-med-and-down'><img src='../resources/images/bande.png' height='110px'/></a>
@@ -32,7 +32,7 @@ echo			"<body>
 													</div>
 												</nav>	
 												<nav>
-													<div class='nav-wrapper blue darken-3'>
+													<div class='nav-wrapper light-blue darken-2'>
 														<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 														<ul id='nav-mobile' style='padding-left:140px;' class='left hide-on-med-and-down'>
 																<li><a href='index.html'>INICIO</a></li>
