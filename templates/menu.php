@@ -26,8 +26,8 @@ echo			"<body>
 													<div class='nav-wrapper light-blue darken-4' style='height:120px;'>
 														
 															<a href='https://www.unam.mx/' target='_blank' class='brand-logo hide-on-med-and-down'><img src='https://www.unam.mx/sites/all/themes/unam/logo.png' height='120px' /></a>
-															<a href='http://localhost/Mediateca/templates/index.html' class='brand-logo right hide-on-med-and-down'><img src='../resources/images/bande.png' height='110px'/></a>
-															<a href='http://localhost/Mediateca/templates/index.html' class='brand-logo center'><img src='../resources/images/logo.png' height='120px'/></a>
+															<a href='index.html' class='brand-logo right hide-on-med-and-down'><img src='../resources/images/bande.png' height='110px'/></a>
+															<a href='index.html' class='brand-logo center'><img src='../resources/images/logo.png' height='120px'/></a>
 													
 													</div>
 												</nav>	
@@ -35,25 +35,25 @@ echo			"<body>
 													<div class='nav-wrapper blue darken-3'>
 														<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 														<ul id='nav-mobile' style='padding-left:140px;' class='left hide-on-med-and-down'>
-																<li><a href='http://localhost/Mediateca/templates/index.html'>INICIO</a></li>
+																<li><a href='index.html'>INICIO</a></li>
 																<li><a href='#test1'>¿QUÉ ES LA MEDIATECA?</a></li>
 																<li><a href='#test2'>MISIÓN</a></li>
 																<li><a href='#test3'>VISIÓN</a></li>
 																<li><a href='#test5'>APRENDER A APRENDER</a></li>
 																<li><a href='#test6'>ASESORES</a></li>
 																<li><a href='#test7' target='_blank'>REPOSITORIO DE MATERIALES</a></li>
-																<li><a href='http://localhost/Mediateca/templates/videos.php'>VIDEOS</a></li>
+																<li><a href='videos.php'>VIDEOS</a></li>
 																<li><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf' target='_blank'>REGLAMENTO</a></li>
 														</ul>
 														<ul class='side-nav' id='mobile-demo'>
-															<li><a href='http://localhost/Mediateca/templates/index.html'>INICIO</a></li>
+															<li><a href='index.html'>INICIO</a></li>
 															<li><a href='#test1'>¿QUÉ ES LA MEDIATECA?</a></li>
 															<li><a href='#test2'>MISIÓN</a></li>
 															<li><a href='#test3'>VISIÓN</a></li>
 															<li><a href='#test5'>APRENDER A APRENDER</a></li>
 															<li><a href='#test6'>ASESORES</a></li>
 															<li><a href='#test7' target='_blank'>REPOSITORIO DE MATERIALES</a></li>
-															<li><a href='http://localhost/Mediateca/templates/videos.php'>VIDEOS</a></li>
+															<li><a href='videos.php'>VIDEOS</a></li>
 															<li><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf' target='_blank'>REGLAMENTO</a></li>
 														</ul>
 													</div>	
@@ -120,8 +120,8 @@ echo			"<body>
 										<div id='test7' class='modal' id='modal'>
 											<div class='modal-content'>
 												<center>
-													<div><a href='http://localhost/Mediateca/templates/matingles.php' title='INGLES'>INGLES</a></div>
-													<div><a href='http://localhost/Mediateca/templates/matfrances.php' title='FRANCES'>FRANCES</a></div>
+													<div><a href='matingles.php' title='INGLES'>INGLES</a></div>
+													<div><a href='matfrances.php' title='FRANCES'>FRANCES</a></div>
 													<div><a href='#' title='ALEMAN'>ALEMAN</a></div>
 													<div><a href='#' title='ITALIANO'>ITALIANO</a></div>
 													<div><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf' target='_blank' title='PLAN'>PLAN DE TRABAJO</a></div>
