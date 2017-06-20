@@ -9,15 +9,15 @@ echo  "<!DOCTYPE html>
 				<!--Import Google Icon Font-->
 				 <link href='http://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
 				 <!--Import materialize.css-->
-				 <link type='text/css' rel='stylesheet' href='../materialize/css/materialize.min.css'  media='screen,projection'/>
+				 <link type='text/css' rel='stylesheet' href='../../materialize/css/materialize.min.css'  media='screen,projection'/>
 				 <!--Let browser know website is optimized for mobile-->
 				 <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 				 <!---Estilo menu------------>
-				 <link  type='text/css' rel='stylesheet' href='../styles/estilado.css'>
+				 <link  type='text/css' rel='stylesheet' href='../../styles/estilado.css'>
 				 <!---Iconos--------------------------------------------------->
-				 <link type='text/css' rel='stylesheet' href='../resources/fonts/sube.css'>
+				 <link type='text/css' rel='stylesheet' href='../../resources/fonts/sube.css'>
 				 <!---Estilo general--->
-				 <link  type='text/css' rel='stylesheet' href='../styles/estilo.css'>
+				 <link  type='text/css' rel='stylesheet' href='../../styles/estilo.css'>
 			</head>";
 			
 			//------Menu estatico----------------------------------------------------------------------------->
@@ -26,8 +26,8 @@ echo			"<body>
 													<div class='nav-wrapper light-blue darken-1' style='height:120px;'>
 														
 															<a href='https://www.unam.mx/' target='_blank' class='brand-logo hide-on-med-and-down'><img src='https://www.unam.mx/sites/all/themes/unam/logo.png' height='120px' /></a>
-															<a href='index.html' class='brand-logo right hide-on-med-and-down'><img src='../resources/images/bande.png' height='110px'/></a>
-															<a href='index.html' class='brand-logo center'><img src='../resources/images/logo.png' height='120px'/></a>
+															<a href='../../templates/index.html' class='brand-logo right hide-on-med-and-down'><img src='../../resources/images/bande.png' height='110px'/></a>
+															<a href='../../templates/index.html' class='brand-logo center'><img src='../../resources/images/logo.png' height='120px'/></a>
 													
 													</div>
 												</nav>	
@@ -42,20 +42,10 @@ echo			"<body>
 																<li><a href='#test5'>APRENDER A APRENDER</a></li>
 																<li><a href='#test6'>ASESORES</a></li>
 																<li><a href='#test7' target='_blank'>REPOSITORIO DE MATERIALES</a></li>
-																<li><a href='videos.php'>VIDEOS</a></li>
+																<li><a href='../programs/php/videos.php'>VIDEOS</a></li>
 																<li><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf' target='_blank'>REGLAMENTO</a></li>
 														</ul>
-														<ul class='side-nav' id='mobile-demo'>
-															<li><a href='index.html'>INICIO</a></li>
-															<li><a href='#test1'>¿QUÉ ES LA MEDIATECA?</a></li>
-															<li><a href='#test2'>MISIÓN</a></li>
-															<li><a href='#test3'>VISIÓN</a></li>
-															<li><a href='#test5'>APRENDER A APRENDER</a></li>
-															<li><a href='#test6'>ASESORES</a></li>
-															<li><a href='#test7' target='_blank'>REPOSITORIO DE MATERIALES</a></li>
-															<li><a href='videos.php'>VIDEOS</a></li>
-															<li><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf' target='_blank'>REGLAMENTO</a></li>
-														</ul>
+													
 													</div>	
 												</nav>";	
 												
@@ -120,8 +110,8 @@ echo			"<body>
 										<div id='test7' class='modal' id='modal'>
 											<div class='modal-content'>
 												<center>
-													<div><a href='matingles.php' title='INGLES'>INGLES</a></div>
-													<div><a href='matfrances.php' title='FRANCES'>FRANCES</a></div>
+													<div><a href='../programs/php/matingles.php' title='INGLES'>INGLES</a></div>
+													<div><a href='../programs/php/matfrances.php' title='FRANCES'>FRANCES</a></div>
 													<div><a href='#' title='ALEMAN'>ALEMAN</a></div>
 													<div><a href='#' title='ITALIANO'>ITALIANO</a></div>
 													<div><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf' target='_blank' title='PLAN'>PLAN DE TRABAJO</a></div>
@@ -141,7 +131,7 @@ echo			"<body>
 										
 							//----------------Scripts-------------------------------------------------------------------------------------------------------------------------------------->
 							echo	"<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
-									<script type='text/javascript' src='../materialize/js/materialize.min.js'></script>
+									<script type='text/javascript' src='../../materialize/js/materialize.min.js'></script>
 									<script>
 												 $(document).ready(function(){
 													$('.modal').modal()
