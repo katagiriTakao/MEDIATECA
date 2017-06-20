@@ -89,5 +89,24 @@ td:hover
     
     background:navy;    
 }
-
-
+.formu{
+	
+	position:relative;
+	top:25%;
+	width:100%;
+	
+	background:#2471A3;
+	padding:10px 30px;
+	box-sizing:border-box;
+	margin-top:20px;
+	border-radius:8px;
+}
+	
+label{
+	
+	
+	font-size:20px;
+	color:#48C9B0;
+	
+	
+}
