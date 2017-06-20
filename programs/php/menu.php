@@ -35,7 +35,7 @@ echo			"<body>
 													<div class='nav-wrapper light-blue darken-2'>
 														<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 														<ul id='nav-mobile' style='padding-left:140px;' class='left hide-on-med-and-down'>
-																<li><a href='index.html'>INICIO</a></li>
+																<li><a href='../../templates/index.html'>INICIO</a></li>
 																<li><a href='#test1'>¿QUÉ ES LA MEDIATECA?</a></li>
 																<li><a href='#test2'>MISIÓN</a></li>
 																<li><a href='#test3'>VISIÓN</a></li>
