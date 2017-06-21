@@ -1,11 +1,8 @@
 <?php
 
-echo		"<form method='POST' action='captura-examen.php'>
-					<input type='text' name='tamaño' placeholder='¿Cuántas preguntas tendra el examen?'>
-					<input type='submit' value='Generar'>
-			</form>";		
+include('menu.php');
 
-
+echo 	"<h2>Captura de Examenes Diagnostico</h2>";
 
 echo	"<!DOCTYPE html>";
 echo	"<html>";
@@ -15,22 +12,18 @@ echo 					"<meta charset='UTF-8'/>";
 echo					"<link rel='stylesheet' type='text/css' href='#'/>";
 echo		"</head>";
 echo		"<body>";	
-			$t=$_POST['tamaño'];
-echo			"<form action='captura-examen.php' method='get'>";
-				for($a=0;$a<$t;$a++){
-echo	"						<br/>
-								Pregunta:<input type='text' name='pre1'><br/>
+echo			"<form action='registra-examen.php' method='POST'>";
+echo							"Pregunta:<input type='text' name='pre1' size='80'><br/>
+								A<input type='text' name='res1'  size='20'><br/>
+  								B<input type='text' name='res2'  size='20'><br/>
+	 	 						C<input type='text' name='res3'  size='20'><br/>
+	 	 						D<input type='text' name='res4'  size='20'><br/>
+	 	 						";//Inciso correcto:<input type='text' name='corecta' size='20' size='40' placeholder='LETRA'><br/>//."
 
-								A<input type='text' name='res1'><br/>
-  								B<input type='text' name='res2'><br/>
-	 	 						C<input type='text' name='res3'><br/>
-	 	 						D<input type='text' name='res4'><br/>
-
-	 	 						<input type='submit' value='Registrar'>";
-	 	 				}
-echo	 	 	"</form>";	
-			$resul=$_GET['res1'];
-			echo  $resul;								
+echo	 	 					"<input type='submit' value='Registrar'>";
+echo	 	 					"<input type='reset' value='Nueva Pregunta'>";
+	
+echo	 	 	"</form>";								
 echo		"</body>";
 echo	"</html>";
 
