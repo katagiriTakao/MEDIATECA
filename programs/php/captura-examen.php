@@ -2,7 +2,7 @@
 
 include('menu.php');
 
-echo 	"<h2>Captura de Examenes Diagnostico</h2>";
+echo 	"<h2>Captura de Examenes Diagnóstico</h2>";
 
 echo	"<!DOCTYPE html>";
 echo	"<html>";
