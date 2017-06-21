@@ -33,7 +33,7 @@
 
 				        echo "<div class='row'>";
 
-						        echo "<div class='col m4' id='preg'></br>".$pregunta[0]."</div>"
+						        echo "<div class='col m4' id='preg'></br>".$pregunta[0]."</div>";
 						           $pregunNumb = $row["id"];
 						           echo $pregunNumb;
 							     echo 						"<div class='input-field col m4'>
