@@ -1,49 +1,49 @@
 <?php
-	if (isset($_POST["cuentanueva"]) && isset($_POST["contranueva"])){
+	
+
+/*En este php, se accede a los datos de la base de datos, se comprueba el usuario, asi como la contraseña y redirecciona segun el caso a los diferentes mensajes 
+	de error*/	
+	if (isset($_POST["cuenta"]) && isset($_POST['contra'])){
 		//Conexión a la base de datos
-		$conexion = mysqli_connect("localhost", "root", "", "jugadores");
+				
+		
+		$conexion = mysqli_connect('localhost', 'root', '', 'usuarios');
 		if (mysqli_connect_errno($conexion)) {
-			echo "Fallo al conectar a MySQL: " . mysqli_connect_error();
+			echo 'Fallo al conectar a MySQL: ' . mysqli_connect_error();
 		}
 		// En caso que la conexion sea exitosa, se mete al programa
 		else{
-		// donde dice $variableUsuario tienes que poner la variable en la cual tienes el nombre del user para validarlo, supongo que ha de ser una POST, pero tu lo modificas		 
-		$usuario = $_POST["cuentanueva"];
-			$nombre = mysqli_real_escape_string ($conexion, $_POST["nombre"]);
-			$fechnac = mysqli_real_escape_string ($conexion, $_POST["fechnac"]);
-			$correo = mysqli_real_escape_string ($conexion, $_POST["correo"]);
-			$cuenta = mysqli_real_escape_string ($conexion, $_POST["cuentanueva"]);
-			$contra = mysqli_real_escape_string ($conexion, $_POST["contranueva"]);	
-			$existe = mysqli_query($conexion,"SELECT * FROM usuarios WHERE nombre_usuario ='".$usuario."'");
-			$existe3 = mysqli_query($conexion,"SELECT * FROM usuarios WHERE correo ='".$correo."'");
-				 
-				 if( mysqli_num_rows($existe) == 0){
-						if( mysqli_num_rows($existe3) == 0){
-							$oregano = md5(uniqid(rand(), true));
-							$mix = hash('sha512', $oregano.$contra);
-							unset($contra);
-							$resultado = mysqli_query($conexion, "INSERT INTO usuarios(nombre,fechnac,correo,nombre_usuario,password,oregano,permiso) VALUES('".$nombre."','".$fechnac."','".$correo."','".$cuenta."','".$mix."','".$oregano."','0');");				
-							}
-						else{							
-							echo "<script>";
-							echo "alert('Este correo ya forma parte de nuestros suscriptores :D');";  
-							echo "window.location = 'main.html';";
-							echo "</script>";}	
-					}
-				else{
+			$cuenta=$_POST['cuenta'];
+			$resultado=mysqli_query($conexion, "SELECT * FROM alumnos WHERE no_cta='".$cuenta."';");
+			$consulta=mysqli_fetch_assoc($resultado);
+			$contra=$_POST['contra'];
+			$nombreusuario=$consulta["nombre_usuario"];	
+				//Comprobar si el usuario existe
+			if ($nombreusuario=="")
+			{
 					echo "<script>";
-					echo "alert('Uuuuuuuuuuuuuuups...este nombre de usuario ya ha sido registrado');";  
-					echo "window.location = 'main.html';";
-					echo "</script>"; 
-				}
-	}
+					echo "alert('Usuario no registrado!');";  
+					echo "window.location = 'index.html';";
+					echo "</script>";
+//EL usuario es válido:
+			}
+			else {
+					SESSION_start();
+					$_SESSION["nombre"]=$nombreusuario;
+					//$_SESSION["id"]=$consulta["no_cta"];
+				
+					echo "<script>";
+					echo "alert('Bienvenido de Nuevo!');";  
+					echo "window.location = '../../indexP.html';";
+					echo "</script>";						
+					}
+					
+		}
 		mysqli_close($conexion);
-		echo "<script>";
-		echo "alert('¡Bienvenido, usuario ".$cuenta." registrado con exito!');";  
-		echo "window.location = 'main.html';";
-		echo "</script>";
 	}
-	else{
-		echo "No esta correctamente completado el formulario de registro.";
+	else {
+		echo "Formulario de inicio de sesion inválido.";
 	}
+
+
 ?>

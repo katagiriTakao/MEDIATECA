@@ -9,7 +9,7 @@ echo
 			<div class='col s12 m6 offset-m3'>
 			  <div class='card card-panel hoverable'>
 				<div class='card-image'>
-				  <img src='../resources/images/comexus.jpg'>
+				  <img src='../../resources/images/comexus.jpg'>
 				</div>
 				<div class='card-content'>
 				  <p>COMEXUS</p>
@@ -61,25 +61,13 @@ echo"<center>
 		  </div>
 	</center>";			*/	
 	//--Footer-----------------------------------------------------------------------------------------------------------------------------------------------------------------> 
-							echo	"<footer class='white page-footer'>
-											  <div class='blue-grey darken-4 footer-copyright'>
-												<div class='container white-text'>
-												© 2017 Copyright Text
-												<a class='white-text right' href='http://www.prepa6.unam.mx'>Preparatoria 6 Antonio Caso</a>
-												</div>
-											  </div>
-									 </footer>";	
-						
-					
-					
-					
-					
-					
-	//----------------------------------------------------------------------------------------------------------------->				
-					echo	"<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
-							<script type='text/javascript' src='../materialize/js/materialize.min.js'></script>";
-					echo	"<script>
-							
-						</script>"
-						
+		echo	"<footer class='white page-footer'>
+						  <div class='blue-grey darken-4 footer-copyright'>
+							<div class='container white-text'>
+							© 2017 Copyright Text
+							<a class='white-text right' href='http://www.prepa6.unam.mx'>Preparatoria 6 Antonio Caso</a>
+							</div>
+						  </div>
+				 </footer>";	
+									
 ?>						
