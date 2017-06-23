@@ -4,25 +4,25 @@ use prueba_preguntas;
 
 
 create table modulo
-	(no_cta varchar(10) ,
+	(no_cta varchar(10),
 	id_sesiones int(3),
 	id_diagnostico int(3));
 
 describe modulo;
 
 create table sesiones
-	(id_sesiones int(3) PRIMARY KEY,
+	(id_sesiones int(3) NOT NULL PRIMARY KEY,
 	no_cta varchar(10) ,
 	hora_entrada varchar(5),
 	hora_salida varchar(5),
 	id_materiales varchar(10) ,
-	id_asesor varchar(7) ;
+	id_asesor varchar(7) 
 		);
 
 describe sesiones;
 
 create table califica
-	(no_cta varchar(10) PRIMARY KEY,
+	(no_cta varchar(10) NOT NULL PRIMARY KEY,
 	nombre  varchar(50),
 	idioma varchar(30),
 	calificaciones varchar(40)
@@ -63,13 +63,20 @@ create table preguntas
 	inD varchar(20),
 	id_tema varchar(10) 
 		);
+create table asesor 
+	(id_asesor varchar(7) NOT NULL PRIMARY KEY,
+	nombre varchar(40),
+	grupos varchar (30),
+
+		);
+
 ALTER TABLE modulo ADD FOREIGN KEY (no_cta) REFERENCES califica(no_cta);
 ALTER TABLE modulo ADD FOREIGN KEY (id_sesiones) REFERENCES sesiones(id_sesiones);
 ALTER TABLE modulo ADD FOREIGN KEY (id_diagnostico) REFERENCES examenes(id_diagnostico);
 
 ALTER TABLE sesiones ADD FOREIGN KEY (no_cta) REFERENCES califica(no_cta);
 ALTER TABLE sesiones ADD FOREIGN KEY (id_materiales) REFERENCES catalogo(id_materiales);
-ALTER TABLE sesiones ADD FOREIGN KEY (id id_asesor) REFERENCES asesor(id_asesor);
+ALTER TABLE sesiones ADD FOREIGN KEY (id_asesor) REFERENCES asesor(id_asesor);
 
 ALTER TABLE catalogo ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
 
