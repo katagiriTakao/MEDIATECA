@@ -1,24 +1,27 @@
 ﻿<?php   
-    <!DOCTYPE html> 
-	<html lang="es">
+
+session_start();
+    
+echo "<!DOCTYPE html> 
+		<html lang='es'>
 		<head>	
 			<title>Mediateca</title>
-			<meta charset="UTF-8"/>
-			<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+			<meta charset='UTF-8'/>
+			<meta http-equiv='X-UA-Compatible' content='IE=edge'/>
 			<!--Import Google Icon Font-->
-			 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			 <link href='http://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
 			 <!--Import materialize.css-->
-			 <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+			 <link type='text/css' rel='stylesheet' href='../materialize/css/materialize.min.css'  media='screen,projection'/>
 			 <!--Let browser know website is optimized for mobile-->
-			 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			 <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 			 <!---Estilo menu------------>
-			 <link  type="text/css" rel="stylesheet" href="../styles/estilado.css">
+			 <link  type='text/css' rel='stylesheet' href='../styles/estilado.css'>
 			 <!---Estilo general--->
-			 <link  type="text/css" rel="stylesheet" href="../styles/estilo.css">
+			 <link  type='text/css' rel='stylesheet' href='../styles/estilo.css'>
 			 <!---Iconos--------------------------------------------------->
-			 <link type="text/css" rel="stylesheet" href="../resources/fonts/sube.css">
+			 <link type='text/css' rel='stylesheet' href='../resources/fonts/sube.css'>
 			 <!---------jquery--del boton arriba------------------------------------------------->
-			 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+			 <script type='text/javascript' src='http://code.jquery.com/jquery-latest.js'></script>
 			 <script>
 								
 									$(document).ready(function(){
@@ -41,46 +44,46 @@
 			 </script>
 		</head>
 		
-		<!------Menu estatico----------------------------------------------------------------------------->
+		//-----Menu estatico----------------------------------------------------------------------------->
 		<body>
-				<!---Boton ir arriba------------>
-					<span class="ir-arriba icon-chevron-thin-up"></span>
-					<!------------------------------------------------------>
-												<nav class="nav-extended">
-													<div class="nav-wrapper  light-blue darken-1" style="height:120px;">
-														<a href="https://www.unam.mx/" target="_blank" class="brand-logo hide-on-med-and-down"><img src="https://www.unam.mx/sites/all/themes/unam/logo.png" height="120px"/></a>
-														<a href="index.html" class="brand-logo right hide-on-med-and-down"><img src="../resources/images/bande.png" height="110px"/></a>
-														<a href="index.html" class="brand-logo center"><img src="../resources/images/logo.png" height="120px"/></a>
+				//--Boton ir arriba------------>
+					<span class='ir-arriba icon-chevron-thin-up'></span>
+					//----------------------------------------------------->
+												<nav class='nav-extended'>
+													<div class='nav-wrapper  light-blue darken-1' style='height:120px;''>
+														<a href='https://www.unam.mx/' target='_blank' class='brand-logo hide-on-med-and-down'><img src='https://www.unam.mx/sites/all/themes/unam/logo.png' height='120px'/></a>
+														<a href='index.html' class='brand-logo right hide-on-med-and-down'><img src='../resources/images/bande.png' height='110px'/></a>
+														<a href='index.html' class='brand-logo center'><img src='../resources/images/logo.png' height='120px'/></a>
 													</div>
 												</nav>	
 												<nav>
-													<div class="nav-wrapper light-blue darken-2">
-														<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+													<div class='nav-wrapper light-blue darken-2'>
+														<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 
-														<ul id="nav-mobile" style="padding-left:60px;" class="left hide-on-med-and-down">
-																<li><a href="index.html">INICIO</a></li>
-																<li><a href="#test1">¿QUÉ ES LA MEDIATECA?</a></li>
-																<li><a href="#test2">MISIÓN</a></li>
-																<li><a href="#test3">VISIÓN</a></li>
-																<li><a href="#test5">APRENDER A APRENDER</a></li>
-																<li><a href="#test6">ASESORES</a></li>
-																<li><a href="#test7" target="_blank">REPOSITORIO DE MATERIALES</a></li>
-																<li><a href="../programs/php/videos.php">VIDEOS</a></li>
-																<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
-																<li><a href="#test8">INICIA SESIÓN</a></li>
+														<ul id='nav-mobile' style='padding-left:60px;' class='left hide-on-med-and-down'>
+																<li><a href='index.html'>INICIO</a></li>
+																<li><a href='#test1'>¿QUÉ ES LA MEDIATECA?</a></li>
+																<li><a href='#test2'>MISIÓN</a></li>
+																<li><a href='#test3'>VISIÓN</a></li>
+																<li><a href='#test5'>APRENDER A APRENDER</a></li>
+																<li><a href='#test6'>ASESORES</a></li>
+																<li><a href='#test7' target='_blank'>REPOSITORIO DE MATERIALES</a></li>
+																<li><a href='../programs/php/videos.php'>VIDEOS</a></li>
+																<li><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf' target='_blank'>REGLAMENTO</a></li>
+																<li><a href='#test8'>INICIA SESIÓN</a></li>
 															
 														</ul>
-													<ul class="side-nav" id="mobile-demo">
-															<li><a href="index.html">INICIO</a></li>
-															<li><a href="#test1">¿QUÉ ES LA MEDIATECA?</a></li>
-															<li><a href="#test2">MISIÓN</a></li>
-															<li><a href="#test3">VISIÓN</a></li>
-															<li><a href="#test5">APRENDER A APRENDER</a></li>
-															<li><a href="#test6">ASESORES</a></li>
-															<li><a href="#test7" target="_blank">REPOSITORIO DE MATERIALES</a></li>
-															<li><a href="../programs/php/videos.php">VIDEOS</a></li>
-															<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
-															<li><a href="#test8">INICIA SESIÓN</a></li>
+													<ul class='side-nav'id='mobile-demo'>
+															<li><a href='index.html'>INICIO</a></li>
+															<li><a href='#test1'>¿QUÉ ES LA MEDIATECA?</a></li>
+															<li><a href='#test2'>MISIÓN</a></li>
+															<li><a href='#test3'>VISIÓN</a></li>
+															<li><a href='#test5'>APRENDER A APRENDER</a></li>
+															<li><a href='#test6'>ASESORES</a></li>
+															<li><a href='#test7' target='_blank'>REPOSITORIO DE MATERIALES</a></li>
+															<li><a href='../programs/php/videos.php'>VIDEOS</a></li>
+															<li><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf' target='_blank'>REGLAMENTO</a></li>
+															<li><a href='#test8'>INICIA SESIÓN</a></li>
 															<li><a href='index.html'>SALIR</a></li>
 														</ul>
 													</div>	
@@ -89,32 +92,32 @@
 											
 							
 						<!-----------------Barra Social------------------------------------------------------------------------>
-										<div class="social">
+										<div class='social'>
 											<ul>
-												<li><a href="https://www.facebook.com/mediatecaprepaseis" target="_blank" class="icon-facebook2"></a></li>
-												<li><a href="https://twitter.com/@MediatecaP6" target="_blank" class="icon-twitter"></a></li>
-												<li><a href="https://www.youtube.com/channel/UCtQflQgDQAbp9l4ELYw829w" target="_blank" class="icon-youtube"></a></li>
-												<li><a href="#" class="icon-google-plus3"></a></li>
+												<li><a href='https://www.facebook.com/mediatecaprepaseis' target='_blank' class='icon-facebook2'></a></li>
+												<li><a href='https://twitter.com/@MediatecaP6' target='_blank' class='icon-twitter'></a></li>
+												<li><a href='https://www.youtube.com/channel/UCtQflQgDQAbp9l4ELYw829w' target='_blank' class='icon-youtube'></a></li>
+												<li><a href='#' class='icon-google-plus3'></a></li>
 											</ul>	
 										</div>
 
 						<!--------------Modals-------------------------------------------------------------------------->												 
 										
-										<div id="test1" class="modal">
-											<div class="modal-content ">
+										<div id='test1' class='modal'>
+											<div class='modal-content'>
 												<h4>¿Qué es la mediateca?</h4>
 												<p>Mediateca</p>
 												<p>La Mediateca es un centro de aprendizaje autodirigido de lenguas extranjeras, el cual ofrece inglés, francés, alemán e italiano con un horario de 8:40 a 20:20 hrs.</p>
 											</div>					
 										</div>
-										<div id="test2" class="modal">
-											<div class="modal-content ">
+										<div id='test2' class='modal'>
+											<div class='modal-content'>
 												<h4>MISIÓN</h4>
 												<p>La Mediateca de la ENP Plantel 6 “Antonio Caso” tiene como misión ofrecer la modalidad de aprendizaje autodirigido en lenguas mediante la formación del aprendiente, la oferta de materiales y recursos de aprendizaje, así como la asesoría académica para apoyar la enseñanza y el aprendizaje de las lenguas y culturas del idioma inglés, francés, italiano y alemán de la comunidad del plantel.</p>
 											</div>					
 										</div>					
-										<div id="test3" class="modal">
-											<div class="modal-content ">
+										<div id='test3' class='modal'>
+											<div class='modal-content ">
 												<h4>VISIÓN</h4>
 												<p>Ofrecer mediante la modalidad de aprendizaje autodirigido, la adquisición de las cuatro habilidades de la lengua del inglés, francés, alemán e italiano; la preparación de las certificaciones, la profesionalización de la Opción Técnica en la Enseñanza de Inglés, y el mejoramiento continuo en el aprovechamiento y rendimiento de los aprendientes del Plantel 6.</p>
 											</div>
