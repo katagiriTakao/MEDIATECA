@@ -50,7 +50,6 @@ echo	"<body>";
 					</div>
 				</div>
 			</div>	";
-		//<div class='fancybox-inner' style='overflow: scroll; width: 800px; height: 533px;'><iframe id='fancybox-frame1497589277557' name='fancybox-frame1497589277557' class='fancybox-iframe' frameborder='0' vspace='0' hspace='0' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen='' scrolling='auto' src='http://www.youtube.com/embed/7VqOPlupZRg?rel=0&amp;autoplay=1'></iframe></div>";
 		//--Footer-----------------------------------------------------------------------------------------------------------------------------------------------------------------> 
 							echo	"<footer class='white page-footer'>
 											  <div class='blue-grey darken-4 footer-copyright'>
@@ -60,14 +59,7 @@ echo	"<body>";
 												</div>
 											  </div>
 									 </footer>";
-		//--------------------------------------------------------------------------------------------------------
-									 
-		echo "	<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
-				<script type='text/javascript' src='../materialize/js/materialize.min.js'></script>";
-		echo	"<script>
-				
-				</script>";  
-        
+		//-----------------------------------------------------------------------------------------------------							  		
 		
 echo	"</body>";
 echo "</html>";	

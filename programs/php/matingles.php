@@ -2,7 +2,6 @@
 
 include ('menu.php');
 
-
 echo "
 		<center>
 			<div class='card' style='width:600px;'>
@@ -22,17 +21,14 @@ echo "
 				
 		</center>";
 	//--Footer-----------------------------------------------------------------------------------------------------------------------------------------------------------------> 
-							echo	"<footer class='white page-footer'>
-											  <div class='blue-grey darken-4 footer-copyright'>
-												<div class='container white-text'>
-												© 2017 Copyright Text
-												<a class='white-text right' href='http://www.prepa6.unam.mx'>Preparatoria 6 Antonio Caso</a>
-												</div>
-											  </div>
-									 </footer>";	
-					
-
-
+			echo	"<footer class='white page-footer'>
+							<div class='blue-grey darken-4 footer-copyright'>
+								<div class='container white-text'>
+									© 2017 Copyright Text
+									<a class='white-text right' href='http://www.prepa6.unam.mx'>Preparatoria 6 Antonio Caso</a>
+								</div>
+							</div>
+					</footer>";	
 ?>
 		
 

@@ -2,6 +2,7 @@
 
 include('menu.php');
 
+
 echo 	"<h2>Captura de Examenes Diagnóstico</h2>";
 echo		"<body>";	
 echo 		"<div class='container'>";
@@ -19,6 +20,16 @@ echo							"Pregunta:<input type='text' name='pre1' size='80'><br/>
 									      <option value='c'>C</option>
 									      <option value='d'>D</option>
 									    </select>
+								</div>
+								<div class='input-field col s12'>
+									    <select  name='tema'>
+									      <option value='' disabled selected>Tema relacionado</option>
+									      <option value='1234fd'>Present simple</option>
+									      <option value='4455sd'>Past simple</option>
+									      <option value='5456tg'>Present continuos</option>
+									      <option value='7889jk'>Past participle</option>
+									      <option value='3545ty'>Future</option>
+									    </select>
 								</div>";
 
 echo	 	 					"<input type='submit' value='Registrar'>";
@@ -34,5 +45,6 @@ echo 		"<script>
 
 echo		"</body>";
 echo	"</html>";
+
 
 ?>
