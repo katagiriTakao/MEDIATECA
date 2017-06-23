@@ -34,7 +34,7 @@
 				
 					echo "<script>";
 					echo "alert('Bienvenido de Nuevo!');";  
-					echo "window.location = '../../indexP.html';";
+					echo "window.location = '../../templates/index.html';";
 					echo "</script>";						
 					}
 					

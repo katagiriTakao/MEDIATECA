@@ -54,6 +54,7 @@
 												</nav>	
 												<nav>
 													<div class="nav-wrapper light-blue darken-2">
+														<a href='' class='left'>¡Hola! ".$_SESSION['nombre']."</a>
 														<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 														<ul id="nav-mobile" style="padding-left:60px;" class="left hide-on-med-and-down">
 																<li><a href="index.html">INICIO</a></li>
@@ -388,7 +389,7 @@
                                                                 $('#primerPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+becaProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+becaProf.titu+'</p></div><div class="card-action"><a href="'+becaProf.accion+'" class="indigo-text">ENTRA</a></div></div></div></div>');
                                                                 $('#segundoPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+semProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+semProf.titu+'</p></div><div class="card-action"><a href="'+semProf.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
                                                                 
-                                                                $('#terceroPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+captura.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+captura.titu+'</p></div><div class="card-action"><a href="'+captura.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                                $('#terceroPr').html('<div class="col s12 m6 hide"><div class="card horizontal"><div class="card-image"><img src="'+captura.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+captura.titu+'</p></div><div class="card-action"><a href="'+captura.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
 
 
 
@@ -413,7 +414,17 @@
                                                                  $("#secProf").addClass("hide");
                                                                  $("#secAlumn").removeClass("hide");
 
-                                                         }                
+                                                         }     
+                                                           function iniciaPro(){
+
+
+                                                         	while(isset($_SESSION['nombre'])){
+
+                                                         		$('#terceroPr').removeClass("hide");
+                                                         	}
+
+
+                                                         }            
 
 									</script>		 
 		</body>	
