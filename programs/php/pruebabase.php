@@ -13,9 +13,9 @@
 
 				echo "</br>";
 
+				
 
-
-				$pregun="select id_preg,preguntas,inA,inB,inC,inD from preguntas order by rand()";
+				$pregun="select * from preguntas  join temas on preguntas.id_tema=temas.id_tema order by rand()";
 
 				echo $pregun;
 
@@ -35,7 +35,10 @@
 
 						        echo "<div class='col m4' id='preg'></br>".$pregunta[0]."</div>";
 						           $pregunNumb = $row["id_preg"];
-						           echo $pregunNumb;
+						           echo " id pregunta ".$pregunNumb;
+
+						          echo "  id tema ".$row['id_tema']." tema ".$row['tema'];
+
 							     echo 						"<div class='input-field col m4'>
 														    <select name=".$pregunNumb.">
 			 											      <option value='' disabled selected></option>
