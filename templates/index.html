@@ -1,4 +1,9 @@
-﻿<?php   
+﻿<?php 
+
+	session_start();
+?>
+
+
     <!DOCTYPE html> 
 	<html lang="es">
 		<head>	
@@ -425,7 +430,7 @@
                                                          function iniciaPro(){
 
 
-                                                         	while(isset($_SESSION['nombre'])){
+                                                         	while(isset($_SESSION['Nombre'])){
 
                                                          		$('#terceroPr').removeClass("hide");
                                                          	}
@@ -434,8 +439,17 @@
                                                          } 
                                                                    
 
-									</script>		 
+									</script>	
+
+
+									<?php
+									// remove all session variables
+									session_unset(); 
+
+									// destroy the session 
+									session_destroy(); 
+									?>
+
+
 		</body>	
 	</html>	
-
-?>	

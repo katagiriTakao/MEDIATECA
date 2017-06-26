@@ -7,17 +7,17 @@
 		//Conexión a la base de datos
 				
 		
-		$conexion = mysqli_connect('localhost', 'root', '', 'usuarios');
+		$conexion = mysqli_connect('localhost', 'root', '', 'profesores');
 		if (mysqli_connect_errno($conexion)) {
 			echo 'Fallo al conectar a MySQL: ' . mysqli_connect_error();
 		}
 		// En caso que la conexion sea exitosa, se mete al programa
 		else{
 			$cuenta=$_POST['cuenta'];
-			$resultado=mysqli_query($conexion, "SELECT * FROM alumnos WHERE no_cta='".$cuenta."';");
+			$resultado=mysqli_query($conexion, "SELECT * FROM datos WHERE no_trabajador='".$cuenta."';");
 			$consulta=mysqli_fetch_assoc($resultado);
 			$contra=$_POST['contra'];
-			$nombreusuario=$consulta["nombre_usuario"];	
+			$nombreusuario=$consulta["Nombre"];	
 				//Comprobar si el usuario existe
 			if ($nombreusuario=="")
 			{
