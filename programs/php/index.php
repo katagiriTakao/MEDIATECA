@@ -1,5 +1,6 @@
 ﻿<?php   
 
+session_start();
     
 echo "<!DOCTYPE html> 
 		<html lang='es'>
@@ -58,7 +59,7 @@ echo	"</head>";
 				echo"							<nav>
 													<div class='nav-wrapper light-blue darken-2'>
 														<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
-
+														
 														<ul id='nav-mobile' style='padding-left:60px;' class='left hide-on-med-and-down'>
 																<li><a href='index.php'>INICIO</a></li>
 																<li><a href='#test1'>¿QUÉ ES LA MEDIATECA?</a></li>
@@ -169,7 +170,7 @@ echo"									<div id='test1' class='modal'>
 
 										<!-- Modal inicio de sesion -->
 										<div id='test8' class='modal'>
-													<form class='col s12' method='POST' action='../programs/php/inicia-sesion.php' >
+													<form class='col s12' method='POST' action='inicia-sesion.php' >
 														<div class='modal-content'>
 															<h4>Inicia Sesión</h4>
 															<!--Formularios para iniciar sesión-->
@@ -370,15 +371,14 @@ echo"								<script>
 
 
 	                     }    
-	                        function cambioAlu(){
+	                    
+
+	                    function cambioAlu(){
 
 	                             $('#secProf').addClass('hide');
 	                             $('#secAlumn').removeClass('hide');
 
 	                     } 
-
-
-
 
 
 
@@ -444,12 +444,7 @@ echo"								<script>
 
 
 
-
-
-
-
-
-
+                                                        
 
 
                           </script>";
@@ -457,9 +452,14 @@ echo"								<script>
 
 
 
+									// remove all session variables
+									session_unset(); 
+
+									// destroy the session 
+									session_destroy(); 
+							
+
 											
-											
-			         
                                                          	 
 echo		"</body>";	
 echo	"</html>";	

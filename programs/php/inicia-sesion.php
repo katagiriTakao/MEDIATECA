@@ -7,34 +7,35 @@
 		//Conexión a la base de datos
 				
 		
-		$conexion = mysqli_connect('localhost', 'root', '', 'profesores');
+		$conexion = mysqli_connect('localhost', 'root', '', 'prueba_preguntas');
 		if (mysqli_connect_errno($conexion)) {
 			echo 'Fallo al conectar a MySQL: ' . mysqli_connect_error();
 		}
 		// En caso que la conexion sea exitosa, se mete al programa
 		else{
 			$cuenta=$_POST['cuenta'];
-			$resultado=mysqli_query($conexion, "SELECT * FROM datos WHERE no_trabajador='".$cuenta."';");
+			$resultado=mysqli_query($conexion, "SELECT * FROM asesor WHERE id_asesor='".$cuenta."';");
 			$consulta=mysqli_fetch_assoc($resultado);
 			$contra=$_POST['contra'];
-			$nombreusuario=$consulta["Nombre"];	
+			$asesor=$consulta["id_asesor"];	
+			$nasesor=$consulta['nombre'];
 				//Comprobar si el usuario existe
-			if ($nombreusuario=="")
+			if ($nasesor=="")
 			{
 					echo "<script>";
 					echo "alert('Usuario no registrado!');";  
-					echo "window.location = 'index.html';";
+					echo "window.location = '../../templates/index.html';";
 					echo "</script>";
 //EL usuario es válido:
 			}
 			else {
 					SESSION_start();
-					$_SESSION["nombre"]=$nombreusuario;
+					$_SESSION["nombre"]=$nasesor;
 					//$_SESSION["id"]=$consulta["no_cta"];
 				
 					echo "<script>";
 					echo "alert('Bienvenido de Nuevo!');";  
-					echo "window.location = '../../templates/index.html';";
+					echo "window.location = '../../templates/index.php';";
 					echo "</script>";						
 					}
 					

@@ -1,4 +1,17 @@
+﻿
+
+
+
+
 <!DOCTYPE html> 
+
+<?php
+ 
+ session_start();
+
+?>
+
+
 	<html lang="es">
 		<head>	
 			<title>Mediateca</title>
@@ -54,8 +67,8 @@
 												</nav>	
 												<nav>
 													<div class="nav-wrapper light-blue darken-2">
-														<a href='' class='left'>¡Hola! ".$_SESSION['nombre']."</a>
 														<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+														<a href='' class='left'>¡Hola! ".$_SESSION['nombre']."</a>
 														<ul id="nav-mobile" style="padding-left:60px;" class="left hide-on-med-and-down">
 																<li><a href="index.html">INICIO</a></li>
 																<li><a href="#test1">¿QUÉ ES LA MEDIATECA?</a></li>
@@ -66,7 +79,7 @@
 																<li><a href="#test7" target="_blank">REPOSITORIO DE MATERIALES</a></li>
 																<li><a href="../programs/php/videos.php">VIDEOS</a></li>
 																<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
-																<li><a href="index.html">SALIR</a></li>
+																<li><a href="#test8">INICIA SESIÓN</a></li>
 															
 														</ul>
 													<ul class="side-nav" id="mobile-demo">
@@ -80,6 +93,7 @@
 															<li><a href="../programs/php/videos.php">VIDEOS</a></li>
 															<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
 															<li><a href="#test8">INICIA SESIÓN</a></li>
+														
 														</ul>
 													</div>	
 												</nav>	
@@ -162,7 +176,34 @@
 												</center>
 											</div>
 										</div>
-				
+
+										<!-- Modal inicio de sesion -->
+										<div id="test8" class="modal">
+													<form class="col s12" method="POST" action="../programs/php/inicia-sesion.php" >
+														<div class="modal-content">
+															<h4>Inicia Sesión</h4>
+															<!--Formularios para iniciar sesión-->
+															<div class="row">
+															<!--Usuario-->
+																<div class="input-field col s12">
+																	<i class="material-icons prefix">account_circle</i>
+																	<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Escribe un no_cuenta valido"/>
+																	<label for="cuenta" data-error="*Completa correctamente este campo" data-success="¡Bien!">Número de cuenta</label>
+																</div>
+															</div>
+															<!--Contraseña-->
+															<div class="input-field col s12">
+																	<i class="material-icons prefix">vpn_key</i>
+																	<input id="contraseña" name="contra" type="password" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Fecha de nacimiento formato:dia/mes/año"/>
+																	<label for="contraseña" data-error="*Completa correctamente este campo" data-success="¡Bien!">Contraseña</label>
+																</div>
+															</div>
+															<div class="modal-footer">
+																<input id="entrar" type="submit" class="waves-effect waves-cyan btn-flat" value="Iniciar"   onclick="iniciaPro()" />
+															</div>
+													</form>
+												</div>
+																				
 										
 						<!----------Slider de imagenes------------------------------------------------------------------>				
 										<div class="slider">
@@ -253,9 +294,7 @@
                                     </div>
                                 </div>
                                           
-                                                
                                              
-
 									
 								<!-----------------Sitios de interés-------------------------------------------------------------------------------------------------->	
 								<div class="container">	
@@ -269,7 +308,7 @@
 												<li>
 													<div class="collapsible-header"><img src="http://www.ferbogar.com/uploads/ferbogar/a347a-reinounido.jpg" height="20px" width="30px"/>       INGLES</div>
 													<div class="collapsible-body"><a href="http://www.perfect-english-grammar.com/index.html" target="_blank" title="Perfect English Grammar">Perfect English Grammar</a></div>
-													<div class="collapsible-body"><a href="https://docs.google.com/spreadsheets/d/1bDw3LXfDeS7FqCzJHxfvjujjzjcCfVRDeQDPHbxE7cE/edit?ts=57756795#gid=0" target="_blank" title="Readers' stock for Students">Readers' stock for Students</a></div>
+													<div class="collapsible-body"><a href="https://docs.google.com/spreadsheets/d/1bDw3LXfDeS7FqCzJHxfvjujjzjcCfVRDeQDPHbxE7cE/edit?ts=57756795#gid=0" target="_blank" title="Readers' stock for Students">Readers stock for Students</a></div>
 												</li>
 												<li>
 													<div class="collapsible-header"><img src="http://fondopantalla.com.es/file/552/2560x1600/crop/fondo-de-pantalla-bandera-de-francia.jpg" height="20px"  width="30px"/>  FRANCES</div>
@@ -329,28 +368,7 @@
 																					this.accion=enlace;
                                                                     }
 
-                                                                        //var prue = new carta('FUENTE DE LA IMAGEN','TITULO DE LA CARTA','ENLACE AL QU ESE DIRIJE')
-
-                                                                                                /*          
-
-                                                                        ESTA ES LA ESCTRUCTURA DE CADA UNO DE LOS ELEMENTOS DE CARTA
-                                                                        <div class="col s6 m4 push m1">
-                                                                                <div class="card horizontal">
-                                                                                        <div class="card-image">
-                                                                                                <img src="" height="150px">
-                                                                                        </div>
-                                                                                        <div class="card-stacked">
-                                                                                                <div class="card-content">
-                                                                                                        <p></p>
-                                                                                                </div>
-                                                                                                <div class="card-action">
-                                                                                                        <a href="" target="blank" class="indigo-text">ENTRA</a>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                </div>
-                                                                       </div>
-                                                                */
-                                                                										  var apren = new carta('https://www.intelligent.com/wp-content/uploads/2013/06/chapter_pic02-1.jpg','APRENDIZAJE AUTODIRIGIDO','../programs/php/plan.php')
+                                                                										  var apren = new carta('https://www.intelligent.com/wp-content/uploads/2013/06/chapter_pic02-1.jpg','APRENDIZAJE AUTODIRIGIDO','../programs/php/plan.php');
                                                                                                           var taller = new carta('http://www.mediateca.prepa6.unam.mx/laboratorios/imgs/LI1.jpg','TALLERES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/Programa1.pdf');  
                                                                                                           var audio = new carta('http://planetalibro.net/img/audiolibros.jpg','AUDIOLIBROS','http://www.mediateca.prepa6.unam.mx/?page_id=239');
 
@@ -364,13 +382,12 @@
                                                                                                           var beca = new carta ('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1280px-Flag_of_Europe.svg.png','BECAS','../programs/php/becaalu.php');
                                                                                                           var becaProf = new carta ('http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/08/becas1-150x150.png','BECAS PARA PROFESORES','../programs/php/becaprofe.php');
                                                                                                           var semProf =new carta('http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/08/Seminario-mediateca2-150x150.jpg','REGISTRO AL SEMINARIO','https://docs.google.com/forms/d/e/1FAIpQLSd2F66HnOWcmnAeGPL_FDjB_CE-AkaV5A4UV-FGZ6Qck38QLA/viewform?c=0&w=1');
+                                                                                                          var mater =new carta('http://www.lifeder.com/wp-content/uploads/2016/07/blogs-para-aprender-ingl%C3%A9s.jpg','MATERIALES','http://www.mediateca.prepa6.unam.mx/?page_id=1092');
+                                                                                                          var plan =new carta('https://contadormx.com/wp-content/uploads/2015/10/formas-y-formatos-del-sat.png','PLAN DE TRABAJO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf');
+
+
                                                                                                           var captura =new carta('../resources/images/captura.png','CAPTURA EXAMEN','../programs/php/captura-examen.php');
 
-
-
-
-                                                                                                          var mater =new carta('http://www.lifeder.com/wp-content/uploads/2016/07/blogs-para-aprender-ingl%C3%A9s.jpg','MATERIALES','http://www.mediateca.prepa6.unam.mx/?page_id=1092');
-                                                                                                          var plan =new carta('https://contadormx.com/wp-content/uploads/2015/10/formas-y-formatos-del-sat.png','PLAN DE TRABAJO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf')
 
 
                                                                 $('#primer').html('<div class="col s12 m6 "><div class="card horizontal"><div class="card-image"><img src="'+taller.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+taller.titu+'</p></div><div class="card-action"><a href="'+taller.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');        
@@ -388,14 +405,14 @@
 
                                                                 $('#primerPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+becaProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+becaProf.titu+'</p></div><div class="card-action"><a href="'+becaProf.accion+'" class="indigo-text">ENTRA</a></div></div></div></div>');
                                                                 $('#segundoPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+semProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+semProf.titu+'</p></div><div class="card-action"><a href="'+semProf.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
+
+                                                                $('#terceroPr').html('<div class="col s12 m6"><div class="card horizontal "><div class="card-image"><img src="'+captura.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+captura.titu+'</p></div><div class="card-action"><a class="my-link" href="'+captura.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
+
+
+
+
+
                                                                 
-                                                                $('#terceroPr').html('<div class="col s12 m6 hide"><div class="card horizontal"><div class="card-image"><img src="'+captura.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+captura.titu+'</p></div><div class="card-action"><a href="'+captura.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
-
-
-
-
-
-
 
                                                                 $('#mater').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+mater.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+mater.titu+'</p></div><div class="card-action"><a href="'+mater.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
                                                                 $('#plan').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+plan.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+plan.titu+'</p></div><div class="card-action"><a href="'+plan.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');                        
@@ -407,6 +424,7 @@
 
                                                                  $("#secAlumn").addClass("hide");
                                                                  $("#secProf").removeClass("hide");
+                              
 
                                                          }    
                                                             function cambioAlu(){
@@ -414,18 +432,25 @@
                                                                  $("#secProf").addClass("hide");
                                                                  $("#secAlumn").removeClass("hide");
 
-                                                         }     
-                                                           function iniciaPro(){
+                                                         }   
 
+                                              
+                                                       
+                                                         	if(isset($_SESSION)){
 
-                                                         	while(isset($_SESSION['nombre'])){
+                        									
+                                                         		$(".my-link").bind('click',false);
 
-                                                         		$('#terceroPr').removeClass("hide");
+                                                         	}else{
+
+                                                         		$(".my-link").bind('click',true);
+
                                                          	}
+                        									
+                                                 
+                                                                                                                
+									</script>	
 
 
-                                                         }            
-
-									</script>		 
 		</body>	
 	</html>	
