@@ -36,7 +36,7 @@ create table catalogo
 
 		);
 create table temas
-	(id_tema varchar(10) NOT NULL PRIMARY KEY
+	(id_tema varchar(10) NOT NULL PRIMARY KEY,
 	tema varchar(50)
 		);
 
@@ -47,15 +47,26 @@ create table examenes
 
 create table chequeo
 
-	(id_tipo char(2),
+	(id_tipo char(2) NOT NULL PRIMARY KEY,
 	result varchar(400),
-	resgistro_res varchar(400),
-	respues varchar(400),
-	id_preg int(3) 
+	registro_res char(2),
+	id_respues char(2)
+	
+		);
+create table respu
+
+	(id_respues char(2) NOT NULL PRIMARY KEY,
+	respues varchar(500)
+		);
+
+create table registroResp
+	(registro_res char(2) NOT NULL PRIMARY KEY,
+	registros varchar(500)
+
 		);
 
 create table preguntas
-	(id_preg int(3) PRIMARY KEY,
+	(id_preg int(3) NOT NULL PRIMARY KEY,
 	preguntas varchar(50),
 	inA varchar(20),
 	inB varchar(20),
@@ -63,10 +74,11 @@ create table preguntas
 	inD varchar(20),
 	id_tema varchar(10) 
 		);
+
 create table asesor 
 	(id_asesor varchar(7) NOT NULL PRIMARY KEY,
 	nombre varchar(40),
-	grupos varchar (30),
+	grupos varchar (30)
 
 		);
 
@@ -82,6 +94,8 @@ ALTER TABLE catalogo ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
 
 ALTER TABLE examenes ADD FOREIGN KEY (id_tipo) REFERENCES chequeo(id_tipo);
 
-ALTER TABLE chequeo ADD FOREIGN KEY (id_preg) REFERENCES preguntas(id_preg);
-
 ALTER TABLE preguntas ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
+
+ALTER TABLE chequeo ADD FOREIGN KEY (id_respues) REFERENCES respu(id_respues);
+
+ALTER TABLE chequeo ADD FOREIGN KEY (registro_res) REFERENCES registroResp(registro_res);
