@@ -18,6 +18,7 @@
 	$modulo2 = "SELECT * FROM modulo JOIN sesiones ON modulo.id_sesiones=sesiones.id_sesiones";
 	$modulo3 = "SELECT * FROM modulo JOIN examenes ON modulo.id_diagnostico=examenes.id_diagnostico";
 	$evaluacion1="SELECT * FROM examenes JOIN chequeo ON examenes.id_tipo=chequeo.id_tipo";
+	$evaluacion2 ="SELECT * FROM chequeo JOIN preguntas ON chequeo.id_preg=preguntas.id_preg";
 
 
 	$cerdo=mysqli_query($conn,$modulo2);
@@ -25,12 +26,14 @@
 	$pollo=mysqli_query($conn,$modulo3);
 
 	$gyu=mysqli_query($conn,$evaluacion1);
+	$tonk=mysqli_query($conn,$evaluacion2);
 
 	$fila=mysqli_fetch_assoc($res);
 	$fila2=mysqli_fetch_assoc($cerdo);
 	$fila3=mysqli_fetch_assoc($pollo);
 
 	$fila4=mysqli_fetch_assoc($gyu);
+	$fila5=mysqli_fetch_assoc($tonk);
 
 
 		
@@ -48,7 +51,9 @@
 
 			echo "</br>modulo/examenes</br>";
 
-			echo  "".$fila3['id_diagnostico']." ".$fila3['id_tipo']." ".$fila4['result']." ".$fila4['resgistro_resp']." ".$fila4['respues']." ";
+			echo  "".$fila3['id_diagnostico']." ".$fila3['id_tipo']." ".$fila4['result']." ".$fila4['resgistro_res']." ".$fila4['respues']." ".$fila5['id_preg']." ".$fila5['id_tema'];
+
+
 
 
 
