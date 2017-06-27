@@ -1,8 +1,4 @@
 ﻿
-
-
-
-
 <!DOCTYPE html> 
 
 <?php
@@ -79,7 +75,7 @@
 																<li><a href="#test7" target="_blank">REPOSITORIO DE MATERIALES</a></li>
 																<li><a href="../programs/php/videos.php">VIDEOS</a></li>
 																<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
-																<li><a href="#test8">INICIA SESIÓN</a></li>
+																<li><a href="index.html">SALIR</a></li>
 															
 														</ul>
 													<ul class="side-nav" id="mobile-demo">
@@ -92,7 +88,7 @@
 															<li><a href="#test7" target="_blank">REPOSITORIO DE MATERIALES</a></li>
 															<li><a href="../programs/php/videos.php">VIDEOS</a></li>
 															<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
-															<li><a href="#test8">INICIA SESIÓN</a></li>
+															<li><a href="index.html">SALIR</a></li>
 														
 														</ul>
 													</div>	
@@ -169,41 +165,13 @@
 											<div class="modal-content">
 												<center>
 													<div><a href="../programs/php/matingles.php" title="INGLES">INGLES</a></div>
-													<div><a href="../programs/php/matfrances.php" title="INGLES">FRANCES</a></div>
-													<div><a href="#" title="INGLES">ALEMAN</a></div>
-													<div><a href="#" title="INGLES">ITALIANO</a></div>
-													<div><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf" target="_blank" title="INGLES">PLAN DE TRABAJO</a></div>
+													<div><a href="../programs/php/matfrances.php" title="FRANCES">FRANCES</a></div>
+													<div><a href="#" title="ALEMAN">ALEMAN</a></div>
+													<div><a href="#" title="ITALIANO">ITALIANO</a></div>
+													<div><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf" target="_blank" title="PLAN">PLAN DE TRABAJO</a></div>
 												</center>
 											</div>
-										</div>
-
-										<!-- Modal inicio de sesion -->
-										<div id="test8" class="modal">
-													<form class="col s12" method="POST" action="../programs/php/inicia-sesion.php" >
-														<div class="modal-content">
-															<h4>Inicia Sesión</h4>
-															<!--Formularios para iniciar sesión-->
-															<div class="row">
-															<!--Usuario-->
-																<div class="input-field col s12">
-																	<i class="material-icons prefix">account_circle</i>
-																	<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Escribe un no_cuenta valido"/>
-																	<label for="cuenta" data-error="*Completa correctamente este campo" data-success="¡Bien!">Número de cuenta</label>
-																</div>
-															</div>
-															<!--Contraseña-->
-															<div class="input-field col s12">
-																	<i class="material-icons prefix">vpn_key</i>
-																	<input id="contraseña" name="contra" type="password" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Fecha de nacimiento formato:dia/mes/año"/>
-																	<label for="contraseña" data-error="*Completa correctamente este campo" data-success="¡Bien!">Contraseña</label>
-																</div>
-															</div>
-															<div class="modal-footer">
-																<input id="entrar" type="submit" class="waves-effect waves-cyan btn-flat" value="Iniciar"   onclick="iniciaPro()" />
-															</div>
-													</form>
-												</div>
-																				
+										</div>				
 										
 						<!----------Slider de imagenes------------------------------------------------------------------>				
 										<div class="slider">
