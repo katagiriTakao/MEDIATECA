@@ -15,50 +15,51 @@
 
 
 	$modulo1 = "SELECT * FROM modulo JOIN califica ON modulo.no_cta=califica.no_cta";
-	$modulo2 = "SELECT * FROM modulo JOIN sesiones ON modulo.id_sesiones=sesiones.id_sesiones";
-	$modulo3 = "SELECT * FROM modulo JOIN examenes ON modulo.id_diagnostico=examenes.id_diagnostico";
-	$evaluacion1="SELECT * FROM examenes JOIN chequeo ON examenes.id_tipo=chequeo.id_tipo";
+
+
+
+	$modulo2 = "SELECT * FROM modulo JOIN sesiones ON modulo.id_sesiones=sesiones.id_sesiones JOIN catalogo ON sesiones.id_materiales=catalogo.id_materiales JOIN asesor ON sesiones.id_asesor=asesor.id_asesor";
+
+
+
+
+	$modulo3 = "SELECT * FROM modulo JOIN examenes ON modulo.id_diagnostico=examenes.id_diagnostico JOIN chequeo ON examenes.id_tipo=chequeo.id_tipo JOIN registroResp ON chequeo.registro_res=registroResp.registro_res JOIN respu ON chequeo.id_respues=respu.id_respues";
+
+
+
 	
+//	$evaluacion2="SELECT * FROM examenes JOIN chequeo ON examenes.id_tipo=chequeo.id_tipo JOIN registroResp ON chequeo.registro_res=registroResp.registro_res JOIN respu ON chequeo.id_respues=respu.id_respues";
 
 
 	$res=mysqli_query($conn,$modulo1);
 	$cerdo=mysqli_query($conn,$modulo2);
 	$pollo=mysqli_query($conn,$modulo3);
 
-	$gyu=mysqli_query($conn,$evaluacion1);
 	
 	$fila=mysqli_fetch_assoc($res);
 	$fila2=mysqli_fetch_assoc($cerdo);
 	$fila3=mysqli_fetch_assoc($pollo);
 
-	$fila4=mysqli_fetch_assoc($gyu);
 
 
 
 		
-			echo "modulo/califica</br>";
+			echo "</br><h1>modulo/califica</h1></br>";
 			echo" ".$fila['no_cta']." ".$fila['idioma']." ".$fila['nombre']." ".$fila['calificaciones']." ";	
 
 
 
-			echo "</br>modulo/sesiones </br>";
+			echo "</br></br><h1>modulo/sesiones</h1></br></br>";
 
-			echo " ".$fila2['id_sesiones']." ".$fila2['no_cta']." ".$fila2['hora_entrada']." ".$fila2['hora_salida']." ".$fila2['id_materiales']." ".$fila2['id_asesor']."";
-
-
-
-
-			echo "</br>modulo/examenes</br>";
-
-			echo  "".$fila3['id_diagnostico']." ".$fila3['id_tipo']." ".$fila4['result']." ".$fila4['resgistro_res']." ".$fila4['respues']." ";
+			echo " numero de sesion ".$fila2['id_sesiones']." </br>num cuenta ".$fila2['no_cta']."</br>hora de entrada ".$fila2['hora_entrada']." </br>hora de salida ".$fila2['hora_salida']." </br>material utilizado ".$fila2['id_materiales']."</br>nombre del material ".$fila2['nombre_mat']." </br>asesor ".$fila2['id_asesor']." </br>nombre dle asesor ".$fila2['nombre'];
 
 
 
 
+			echo "</br></br><h1>modulo/examenes</h1></br></br>";
 
 
-
-
+			echo     " id diagnostico  ".$fila3['id_diagnostico']." </br>tipo de examen  ".$fila3['id_tipo']." resultados   ".$fila3['result']."  </br>tipo de respuestas  ".$fila3['registro_res']." </br>respuestas del alumno   ".$fila3['registros']."  </br>idioma de las respuestas  ".$fila3['id_respues']."  </br>respuestas correctas  ".$fila3['respues']." ";
 
 
 
