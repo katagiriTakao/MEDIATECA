@@ -37,43 +37,63 @@
 
 				$correctas=(explode(',',$fila['respues']));
 
+				/*$correctas=new SplFixedArray(100);
 
-				foreach ($correctas as $res) {
-
-						foreach($alures as $res2){
-
-
-											if($res2===$res){
+				$alures=new SplFixedArray(100);*/
 
 
-												$correcta=$res2;//String o array con localidades del 1-100 Que lo guarde con valor 1
-												$res2=1;
+				print_r($correctas);
+
+				print_r($alures);
+
+
+
+				/*$arre1=array('1'=>'A','2'=>'H','3'=>'D','4'=>'S');
+				$arre2=array('1'=>'A','2'=>'H','3'=>'D','4'=>'S');
+
+				/*$resultado = array_diff_assoc($arre2, $arre1);
+
+				echo "Errores:"; print_r($resultado);
+
+				echo "<br/>";
+
+				$result_array = array_intersect_assoc($arre1, $arre2);
+				
+				echo "Correctas:"; print_r($result_array);
+
+
+				
+				foreach ($arre2 as $pregunta2=>$letra2) {
+
+						foreach($arre1 as $pregunta1=>$letra1){
+
+
+											IF($letra1==$letra2){
+
+
+												$letra1=1;//String o array con localidades del 1-100 Que lo guarde con valor 1
+												
+												
 
 											}else{
 
-												$incorrecta=$res2;
-												$res2=0;
-
+												$letra1=0;
+												
 											}
 
+							
 						}
-					
-				}
+
+					var_dump($letra1);	
+						
+				}*/
+				
+				
+
+				
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+				
 
 
 ?>
