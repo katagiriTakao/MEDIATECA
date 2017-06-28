@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 
 echo  "<!DOCTYPE html> 
@@ -37,9 +36,8 @@ echo			"<body>
 												<nav>
 													<div class='nav-wrapper light-blue darken-2'>
 														<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
-														<a href='#' class='left'>¡Hola! ".$_SESSION['nombre']."</a>
 														<ul id='nav-mobile' style='padding-left:140px;' class='left hide-on-med-and-down'>
-																<li><a href='' id='home' onclick='return checa()'>INICIO</a></li>
+																<li><a href='../../templates/index.html' onclick='return checa()'>INICIO</a></li>
 																<li><a href='#test1'>¿QUÉ ES LA MEDIATECA?</a></li>
 																<li><a href='#test2'>MISIÓN</a></li>
 																<li><a href='#test3'>VISIÓN</a></li>
@@ -158,18 +156,23 @@ echo			"<body>
 												  $('.button-collapse').sideNav();
 												  });";
 											
-																								
-												/*if(isset($_SESSION['nombre'] ) )
+												 /* function checa(){
 
-												{
-													//$('#home').attr('href','index.php');
-													echo "Sesion iniciada";
-												}
-												else {
-													//$('#home').attr('href','index.html');
-													echo "No iniciado";
-												  };
-												  */
+												  	if(isset($_SESSION['nombre'])){
+
+
+												  		return true;
+												  	}else{
+
+
+												  		echo "<a href='../../templates/index.html'></a>";
+												  	}
+
+
+
+
+												  }*/
+												  
 
 echo								"</script>";				
 echo		"</body>";

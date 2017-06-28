@@ -28,7 +28,7 @@ include('menu.php');
 												  <p>Examen diagnostico</p>
 												</div>
 												<div class='card-action'>
-												  <a href='#'>ENTRAR</a>
+												  <a href='pruebabase.php'>ENTRAR</a>
 												</div>
 											  </div>
 											</div>";

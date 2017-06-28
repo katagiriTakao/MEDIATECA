@@ -64,7 +64,8 @@
 												<nav>
 													<div class="nav-wrapper light-blue darken-2">
 														<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-														<!--<?php echo" <a href='' class='left'>¡Hola! ".$_SESSION['nombre']."</a>";?>-->
+														<!--<?php echo" <a href='#' class='left'>¡Hola! ".$_SESSION['nombre']."</a>";?>-->
+
 														<ul id="nav-mobile" style="padding-left:170px;" class="left hide-on-med-and-down">
 																<li><a href="index.html">INICIO</a></li>
 																<li><a href="#test1">¿QUÉ ES LA MEDIATECA?</a></li>
