@@ -65,7 +65,7 @@
 													<div class="nav-wrapper light-blue darken-2">
 														<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 														<?php echo" <a href='' class='left'>¡Hola! ".$_SESSION['nombre']."</a>";?>
-														<ul id="nav-mobile" style="padding-left:60px;" class="left hide-on-med-and-down">
+														<ul id="nav-mobile" style="padding-left:170px;" class="left hide-on-med-and-down">
 																<li><a href="index.html">INICIO</a></li>
 																<li><a href="#test1">¿QUÉ ES LA MEDIATECA?</a></li>
 																<li><a href="#test2">MISIÓN</a></li>
@@ -75,7 +75,7 @@
 																<li><a href="#test7" target="_blank">REPOSITORIO DE MATERIALES</a></li>
 																<li><a href="../programs/php/videos.php">VIDEOS</a></li>
 																<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
-																<li><a href="index.html">SALIR</a></li>
+																<li><a href="index.html" onclick="salir()">SALIR</a></li>
 															
 														</ul>
 													<ul class="side-nav" id="mobile-demo">
@@ -88,7 +88,7 @@
 															<li><a href="#test7" target="_blank">REPOSITORIO DE MATERIALES</a></li>
 															<li><a href="../programs/php/videos.php">VIDEOS</a></li>
 															<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
-															<li><a href="index.html">SALIR</a></li>
+															<li><a href="index.html" onclick="salir()">SALIR</a></li>
 														
 														</ul>
 													</div>	
@@ -354,7 +354,7 @@
                                                                                                           var plan =new carta('https://contadormx.com/wp-content/uploads/2015/10/formas-y-formatos-del-sat.png','PLAN DE TRABAJO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf');
 
 
-                                                                                                          var captura =new carta('../resources/images/captura.png','CAPTURA EXAMEN','../programs/php/captura-examen.php');
+                                                                                                          var captura =new carta('http://www.blogdelaautoescuela.com/america/wp-content/uploads/2013/06/TOEFL200000000001.jpg','CAPTURA EXAMEN','../programs/php/captura-examen.php');
 
 
 
@@ -374,7 +374,7 @@
                                                                 $('#primerPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+becaProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+becaProf.titu+'</p></div><div class="card-action"><a href="'+becaProf.accion+'" class="indigo-text">ENTRA</a></div></div></div></div>');
                                                                 $('#segundoPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+semProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+semProf.titu+'</p></div><div class="card-action"><a href="'+semProf.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
 
-                                                                $('#terceroPr').html('<div class="col s12 m6"><div class="card horizontal "><div class="card-image"><img src="'+captura.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+captura.titu+'</p></div><div class="card-action"><a class="my-link" href="'+captura.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                                $('#terceroPr').html('<div class="col s12 m6"><div class="card horizontal "><div class="card-image"><img src="'+captura.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+captura.titu+'</p></div><div class="card-action"><a href="'+captura.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
 
 
 
@@ -403,18 +403,14 @@
                                                          }   
 
                                               
+                                              				function salir(){
+
+
+                                              					<?php session_destroy(); ?>
+
+
+                                              				}
                                                        
-                                                         	if(isset($_SESSION)){
-
-                        									
-                                                         		$(".my-link").bind('click',false);
-
-                                                         	}else{
-
-                                                         		$(".my-link").bind('click',true);
-
-                                                         	}
-                        									
                                                  
                                                                                                                 
 									</script>	

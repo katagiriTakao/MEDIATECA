@@ -1,5 +1,8 @@
 <?php
 
+
+session_start();
+
 echo  "<!DOCTYPE html> 
 		<html lang='es'>
 			<head>	
@@ -34,8 +37,9 @@ echo			"<body>
 												<nav>
 													<div class='nav-wrapper light-blue darken-2'>
 														<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+														<a href='' class='left'>¡Hola! ".$_SESSION['nombre']."</a>
 														<ul id='nav-mobile' style='padding-left:140px;' class='left hide-on-med-and-down'>
-																<li><a href='../../templates/index.html'>INICIO</a></li>
+																<li><a href='../../templates/index.php' onclick='return checa()'>INICIO</a></li>
 																<li><a href='#test1'>¿QUÉ ES LA MEDIATECA?</a></li>
 																<li><a href='#test2'>MISIÓN</a></li>
 																<li><a href='#test3'>VISIÓN</a></li>
@@ -44,6 +48,7 @@ echo			"<body>
 																<li><a href='#test7' target='_blank'>REPOSITORIO DE MATERIALES</a></li>
 																<li><a href='../php/videos.php'>VIDEOS</a></li>
 																<li><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf' target='_blank'>REGLAMENTO</a></li>
+																<li><a href='../../templates/index.html'>SALIR</a></li>
 														</ul>
 														<ul class='side-nav' id='mobile-demo'>
 															<li><a href='../../index.html'>INICIO</a></li>
@@ -55,7 +60,7 @@ echo			"<body>
 															<li><a href='#test7'> target='_blank'>REPOSITORIO DE MATERIALES</a></li>
 															<li><a href='../php/videos.php'>VIDEOS</a></li>
 															<li><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf' target='_blank'>REGLAMENTO</a></li>
-															<li><a href='#test8'>INICIA SESIÓN</a></li>
+															<li><a href='../../templates/index.html'>SALIR</a></li>
 														</ul>
 													
 													</div>	
@@ -151,9 +156,27 @@ echo			"<body>
 												   $( document ).ready(function(){
 												  
 												  $('.button-collapse').sideNav();
-												  });
+												  });";
 											
-									</script>";				
+												  function checa(){
+
+												  	if(isset($_SESSION['nombre'])){
+
+
+												  		return true;
+												  	}else{
+
+
+												  		echo "<a href='../../templates/index.html'></a>";
+												  	}
+
+
+
+
+												  }
+												  
+
+echo								"</script>";				
 echo		"</body>";
 echo	"</html>";
 ?>

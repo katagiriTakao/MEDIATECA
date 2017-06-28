@@ -13,7 +13,16 @@ foreach($respucorect as $pregunta=>$letra)
 	}
 
 
+/*?php
+$array = new SplFixedArray(5);
 
+$array[1] = 2;
+$array[4] = "foo";
+
+foreach($array as $v) {
+  var_dump($v);
+}
+?>*/
 
 
 
