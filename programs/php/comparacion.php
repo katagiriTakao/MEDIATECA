@@ -1,6 +1,6 @@
 <?php
 
-
+	include ('menu.php');
 
 				$conn = new mysqli('localhost', 'root', '','prueba_preguntas');
 
@@ -37,9 +37,6 @@
 
 				$correctas=(explode(',',$fila['respues']));
 
-				/*$correctas=new SplFixedArray(100);
-
-				$alures=new SplFixedArray(100);*/
 
 
 				print_r($correctas);
@@ -47,11 +44,11 @@
 				print_r($alures);
 
 
+				echo "<br/>"; 
+				$arre1=array('A','J','D','S','S');
+				$arre2=array('B','H','D','G','S');
 
-				/*$arre1=array('1'=>'A','2'=>'H','3'=>'D','4'=>'S');
-				$arre2=array('1'=>'A','2'=>'H','3'=>'D','4'=>'S');
-
-				/*$resultado = array_diff_assoc($arre2, $arre1);
+				$resultado = array_diff_assoc($arre2, $arre1);
 
 				echo "Errores:"; print_r($resultado);
 
@@ -62,38 +59,94 @@
 				echo "Correctas:"; print_r($result_array);
 
 
+				echo "<br/>";
+
+		
+				$guarda=array();
+				$ava=0;
+
+				for ($ava=0;$ava<=4;$ava++){
+
+
+
+					if ($arre1[$ava]==$arre2[$ava])
+
+					{
+						$guarda[$ava]=1;
+					}
+					else
+					{
+
+						$guarda[$ava]=0;
+
+					};
+
+
+
+				};
+
 				
-				foreach ($arre2 as $pregunta2=>$letra2) {
+				print_r($guarda);
+				echo "</br>";
+			
 
-						foreach($arre1 as $pregunta1=>$letra1){
+				$cadenaza=implode(',',$guarda);
 
 
-											IF($letra1==$letra2){
+
+				echo $cadenaza;
 
 
-												$letra1=1;//String o array con localidades del 1-100 Que lo guarde con valor 1
-												
-												
+				$regreso=explode(',',$cadenaza);
 
-											}else{
+				echo "</br>";
+				print_r($regreso);
+				$vari=1;
 
-												$letra1=0;
-												
-											}
+				echo "<table>";
 
-							
-						}
+				foreach ($regreso as $ki ) {
+					
+					$varstri=(string)$ki;
+					
+					switch ($varstri)  {
 
-					var_dump($letra1);	
+
+							case  '0' :
+									echo 
+										"<tr>
+											<td> ".$vari."</td>
+											<td> equivoco</td>
+										</tr>";
+
+
+										;
+										break;
+										
+
+							case '1':
+
+										
+
+											echo 
+											"<tr>
+												<td> ".$vari."</td>
+												<td> correcto</td>
+											</tr>";
+
+
+										;
+										break;	
+
+
+					};
+						$vari++;
+
 						
-				}*/
-				
-				
+						};
 
-				
-
-
-				
+						
+				echo "</table>"
 
 
 ?>
