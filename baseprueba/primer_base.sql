@@ -11,11 +11,11 @@ create table modulo
 describe modulo;
 
 create table sesiones
-	(id_sesiones int(3) NOT NULL PRIMARY KEY,
+	(id_sesiones int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
 	no_cta varchar(10) ,
 	hora_entrada varchar(5),
 	hora_salida varchar(5),
-	id_materiales varchar(10) ,
+	id_mat_sesi int(3),
 	id_asesor varchar(7) 
 		);
 
@@ -28,6 +28,12 @@ create table califica
 	calificaciones varchar(40)
 
 		);
+
+create table materi_sesio
+	(id_mat_sesi int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	id_materiales varchar(10)
+		);
+
 create table catalogo
 	(id_materiales varchar(10) NOT NULL PRIMARY KEY,
 	nombre_mat varchar(50),
@@ -41,7 +47,7 @@ create table temas
 		);
 
 create table examenes
-	(id_diagnostico int(3) NOT NULL PRIMARY KEY,
+	(id_diagnostico int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
 	id_tipo char(2) 
 		);
 
@@ -66,7 +72,7 @@ create table registroResp
 		);
 
 create table preguntas
-	(id_preg int(3) NOT NULL PRIMARY KEY,
+	(id_preg int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
 	preguntas varchar(50),
 	inA varchar(20),
 	inB varchar(20),
@@ -87,8 +93,12 @@ ALTER TABLE modulo ADD FOREIGN KEY (id_sesiones) REFERENCES sesiones(id_sesiones
 ALTER TABLE modulo ADD FOREIGN KEY (id_diagnostico) REFERENCES examenes(id_diagnostico);
 
 ALTER TABLE sesiones ADD FOREIGN KEY (no_cta) REFERENCES califica(no_cta);
-ALTER TABLE sesiones ADD FOREIGN KEY (id_materiales) REFERENCES catalogo(id_materiales);
+ALTER TABLE sesiones ADD FOREIGN KEY (id_mat_sesi) REFERENCES materi_sesio(id_mat_sesi);
 ALTER TABLE sesiones ADD FOREIGN KEY (id_asesor) REFERENCES asesor(id_asesor);
+
+
+ALTER TABLE materi_sesio ADD FOREIGN KEY (id_materiales) REFERENCES catalogo(id_materiales);
+
 
 ALTER TABLE catalogo ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
 
