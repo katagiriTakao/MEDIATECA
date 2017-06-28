@@ -47,10 +47,12 @@
 
 
 												$correcta=$res2;//String o array con localidades del 1-100 Que lo guarde con valor 1
+												$res2=1;
 
 											}else{
 
 												$incorrecta=$res2;
+												$res2=0;
 
 											}
 
