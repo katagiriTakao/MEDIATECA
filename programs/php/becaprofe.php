@@ -26,7 +26,7 @@ echo"<center>
 			<div class='col s12 m6 offset-m3'>
 			  <div class='card card-panel hoverable'>
 				<div class='card-image'>
-				  <img src='https://pub.teachwithepi.com/svg/recruitment-partners.svg'>
+				  <img src='../../resources/images/svg.svg'>
 				 
 				</div>
 				<div class='card-content'>

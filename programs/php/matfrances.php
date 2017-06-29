@@ -7,7 +7,7 @@ echo  "
 		<center>
 			<div class='card' style='width:600px;'>
 				<div class='card-image waves-effect waves-block waves-light'>
-				  <img src='https://es.babbel.com/assets/static/img/clases-de-frances.jpg'>
+				  <img src='../../resources/images/frances.jpg'>
 				</div>
 				<div class='card-content card-panel hoverable'>
 				  <span class='card-title grey-text text-darken-4'>FRANCES</span>
