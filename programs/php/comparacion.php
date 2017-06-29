@@ -102,11 +102,13 @@
 				echo "</br>";
 				print_r($regreso);
 				$vari=1;
-
+				$calif=0;
 				echo "<table>";
 
 				foreach ($regreso as $ki ) {
 					
+
+					$calif+=$ki;
 					$varstri=(string)$ki;
 					
 					switch ($varstri)  {
@@ -144,7 +146,7 @@
 
 						
 						};
-
+						echo $calif;
 						
 				echo "</table>"
 
