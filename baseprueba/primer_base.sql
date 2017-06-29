@@ -6,7 +6,9 @@ use prueba_preguntas;
 create table modulo
 	(no_cta varchar(10),
 	id_sesiones int(3),
-	id_diagnostico int(3)
+	id_diagnostico int(3),
+	comen_alum int(3),
+	comen_prof int(3)
 	);
 
 describe modulo;
@@ -86,14 +88,26 @@ create table preguntas
 
 create table asesor 
 	(id_asesor varchar(7) NOT NULL PRIMARY KEY,
-	nombre varchar(40),
+	nombre_as varchar(40),
 	grupos varchar (30)
 
+		);
+
+create table alumno_comen 
+	(comen_alum int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	comentario varchar(1000)
+
+		);
+create table profe_comen
+	(comen_prof int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	comentario varchar(1000)
 		);
 
 ALTER TABLE modulo ADD FOREIGN KEY (no_cta) REFERENCES califica(no_cta);
 ALTER TABLE modulo ADD FOREIGN KEY (id_sesiones) REFERENCES sesiones(id_sesiones);
 ALTER TABLE modulo ADD FOREIGN KEY (id_diagnostico) REFERENCES examenes(id_diagnostico);
+ALTER TABLE modulo ADD FOREIGN KEY (comen_alum) REFERENCES alumno_comen(comen_alum);
+ALTER TABLE modulo ADD FOREIGN KEY (comen_prof) REFERENCES profe_comen(comen_prof);
 
 ALTER TABLE sesiones ADD FOREIGN KEY (no_cta) REFERENCES califica(no_cta);
 ALTER TABLE sesiones ADD FOREIGN KEY (id_mat_sesi) REFERENCES materi_sesio(id_mat_sesi);
@@ -115,3 +129,4 @@ ALTER TABLE preguntas ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
 ALTER TABLE chequeo ADD FOREIGN KEY (id_respues) REFERENCES respu(id_respues);
 
 ALTER TABLE chequeo ADD FOREIGN KEY (registro_res) REFERENCES registroResp(registro_res);
+
