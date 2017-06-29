@@ -7,7 +7,7 @@ include('menu.php');
 											<div class='col s12 m4'>
 											  <div class='card'>
 												<div class='card-image'>
-												  <img src='http://www.revistamoi.com/wp-content/uploads/2016/04/junta-exitosa-b.jpg'>
+												  <img src='../../resources/images/junta.jpg'>
 												</div>
 												<div class='card-content'>
 												  <p>Sesiones de trabajo</p>
@@ -22,7 +22,7 @@ include('menu.php');
 											<div class='col s12 m4'>
 											  <div class='card'>
 												<div class='card-image'>
-												  <img src='http://media2.ef.com/sitecore/__~/media/efcom/online-language-test/shared-content/general-images/testLandingBG.jpg?h=758&la=es-MX&w=960'>
+												  <img src='../../resources/images/examen.jpg'>
 												</div>
 												<div class='card-content'>
 												  <p>Examen diagnostico</p>
@@ -37,7 +37,7 @@ include('menu.php');
 											<div class='col s12 m4'>
 											  <div class='card'>
 												<div class='card-image'>
-												  <img src='http://www.wikihow.com/images/b/b3/Write-a-Work-Plan-Step-8-Version-2.jpg'>	  
+												  <img src='../../resources/images/escribe.jp'>	  
 												</div>
 												<div class='card-content'>
 												  <p>Plan</p>

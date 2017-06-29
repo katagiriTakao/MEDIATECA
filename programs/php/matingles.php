@@ -6,7 +6,7 @@ echo "
 		<center>
 			<div class='card' style='width:600px;'>
 				<div class='card-image waves-effect waves-block waves-light'>
-				  <img src='http://contenidos.enter.co/custom/uploads/2015/07/ingles_1000.jpg'>
+				  <img src='../../resources/images/ingles.jpg'>
 				</div>
 				<div class='card-content card-panel hoverable'>
 				  <span class='card-title grey-text text-darken-4'>INGLÉS</span>
