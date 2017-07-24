@@ -16,17 +16,17 @@
 			<!--Import Google Icon Font-->
 			 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 			 <!--Import materialize.css-->
-			 <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+			 <link type="text/css" rel="stylesheet" href="../../materialize/css/materialize.min.css"  media="screen,projection"/>
 			 <!--Let browser know website is optimized for mobile-->
 			 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			 <!---Estilo menu------------>
-			 <link  type="text/css" rel="stylesheet" href="../styles/estilado.css">
+			 <link  type="text/css" rel="stylesheet" href="../../styles/estilado.css">
 		
 
-			 <link  type="text/css" rel="stylesheet" href="../styles/estilo.css">
+			 <link  type="text/css" rel="stylesheet" href="../../styles/estilo.css">
 			
 
-			 <link type="text/css" rel="stylesheet" href="../resources/fonts/sube.css">
+			 <link type="text/css" rel="stylesheet" href="../../resources/fonts/sube.css">
 			
 			 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 			 <script>
@@ -69,7 +69,7 @@
 														<!--<?php echo" <a href='#' class='left'>¡Hola! ".$_SESSION['nombre']."</a>";?>-->
 
 														<ul id="nav-mobile" style="padding-left:170px;" class="left hide-on-med-and-down">
-																<li><a href="index.html">INICIO</a></li>
+																<li><a href="index.php">INICIO</a></li>
 																<li><a href="#test1">¿QUÉ ES LA MEDIATECA?</a></li>
 																<li><a href="#test2">MISIÓN</a></li>
 																<li><a href="#test3">VISIÓN</a></li>
@@ -82,7 +82,7 @@
 															
 														</ul>
 													<ul class="side-nav" id="mobile-demo">
-															<li><a href="index.html">INICIO</a></li>
+															<li><a href="index.php">INICIO</a></li>
 															<li><a href="#test1">¿QUÉ ES LA MEDIATECA?</a></li>
 															<li><a href="#test2">MISIÓN</a></li>
 															<li><a href="#test3">VISIÓN</a></li>
@@ -167,10 +167,10 @@
 										<div id="test7" class="modal">
 											<div class="modal-content">
 												<center>
-													<div><a href="../programs/php/matingles.php" title="INGLES">INGLES</a></div>
-													<div><a href="../programs/php/matfrances.php" title="FRANCES">FRANCES</a></div>
-													<div><a href="../programs/php/mataleman.php" title="ALEMAN">ALEMAN</a></div>
-													<div><a href="../programs/php/matitali.php" title="ITALIANO">ITALIANO</a></div>
+													<div><a href="matingles.php" title="INGLES">INGLES</a></div>
+													<div><a href="matfrances.php" title="FRANCES">FRANCES</a></div>
+													<div><a href="mataleman.php" title="ALEMAN">ALEMAN</a></div>
+													<div><a href="matitali.php" title="ITALIANO">ITALIANO</a></div>
 													<div><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf" target="_blank" title="PLAN">PLAN DE TRABAJO</a></div>
 												</center>
 											</div>
@@ -314,7 +314,7 @@
 									 </footer>
 						<!----------------Scripts-------------------------------------------------------------------------------------------------------------------------------------->
 									<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-									<script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+									<script type="text/javascript" src="../../materialize/js/materialize.min.js"></script>
 									<script>
 												$(document).ready(function(){
 													$('.slider').slider();
@@ -339,58 +339,60 @@
 																					this.accion=enlace;
                                                                     }
 
-                                                                										  var apren = new carta('../resources/images/ima1.jpg','APRENDIZAJE AUTODIRIGIDO','../programs/php/plan.php');
-                                                                                                          var taller = new carta('http://www.mediateca.prepa6.unam.mx/laboratorios/imgs/LI1.jpg','TALLERES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/Programa1.pdf');  
-                                                                                                          var audio = new carta('../resources/images/ima3.jpg','AUDIOLIBROS','http://www.mediateca.prepa6.unam.mx/?page_id=239');
+                                                                										  var apren = new carta('../../resources/images/ima1.jpg','APRENDIZAJE AUTODIRIGIDO','../programs/php/plan.php');
 
-                                                                                                          var asesor = new carta('../resources/images/ima4.jpg','ASESORES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/05/HORARIO-ASESORES-16-17_020517.pdf');
+                                                                                                          var taller = new carta('../../resources/images/talleres.jpg','TALLERES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/Programa1.pdf');  
+                                                                                                          var audio = new carta('../../resources/images/ima3.jpg','AUDIOLIBROS','http://www.mediateca.prepa6.unam.mx/?page_id=239');
+
+                                                                                                          var asesor = new carta('../../resources/images/ima4.jpg','ASESORES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/05/HORARIO-ASESORES-16-17_020517.pdf');
+
                                                                                                           var lab = new carta('../../resources/images/ima5.jpg','LABORATORIO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/03/Laboratorio_Multimedia_17_Marzo.pdf');
 
-                                                                                                          var revis = new carta('../resources/images/ima6.png','REVISTA','https://view.joomag.com/mi-mediateca/0938958001470151257?short');
+                                                                                                          var revis = new carta('../../resources/images/ima6.png','REVISTA','https://view.joomag.com/mi-mediateca/0938958001470151257?short');
 
-                                                                                                          var encu = new carta('../resources/images/ima6.1.jpg','ENCUESTA','https://docs.google.com/forms/d/e/1FAIpQLSdr-F3b-USKrQ_oAfbPker62Fige3ljfI1G0Yo5jypCtJw8vg/viewform?c=0&w=1');
+                                                                                                          var encu = new carta('../../resources/images/ima6.1.jpg','ENCUESTA','https://docs.google.com/forms/d/e/1FAIpQLSdr-F3b-USKrQ_oAfbPker62Fige3ljfI1G0Yo5jypCtJw8vg/viewform?c=0&w=1');
 
-                                                                                                          var certif = new carta ('../resources/images/ima7.png','CERTIFICACIONES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/PI-CIA_-SEDE.pdf');
+                                                                                                          var certif = new carta ('../../resources/images/ima7.png','CERTIFICACIONES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/PI-CIA_-SEDE.pdf');
 
-                                                                                                          var beca = new carta ('../resources/images/ima7.1.png','BECAS','../programs/php/becaalu.php');
-                                                                                                          var becaProf = new carta ('http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/08/becas1-150x150.png','BECAS PARA PROFESORES','../programs/php/becaprofe.php');
+                                                                                                          var beca = new carta ('../../resources/images/ima7.1.png','BECAS','../programs/php/becaalu.php');
 
-                                                                                                          var semProf =new carta('http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/08/Seminario-mediateca2-150x150.jpg','REGISTRO AL SEMINARIO','https://docs.google.com/forms/d/e/1FAIpQLSd2F66HnOWcmnAeGPL_FDjB_CE-AkaV5A4UV-FGZ6Qck38QLA/viewform?c=0&w=1');
+                                                                                                          var becaProf = new carta ('../../resources/images/bprofe.jpg','BECAS PARA PROFESORES','../programs/php/becaprofe.php');
 
-                                                                                                          var mater =new carta('../resources/images/ima10.jpg','MATERIALES','http://www.mediateca.prepa6.unam.mx/?page_id=1092');
+                                                                                                          var semProf =new carta('../../resources/images/seminarios.jpg','REGISTRO AL SEMINARIO','https://docs.google.com/forms/d/e/1FAIpQLSd2F66HnOWcmnAeGPL_FDjB_CE-AkaV5A4UV-FGZ6Qck38QLA/viewform?c=0&w=1');
 
-                                                                                                          var plan =new carta('../resources/images/ima11.png','PLAN DE TRABAJO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf');
+                                                                                                          var mater =new carta('../../resources/images/ima10.jpg','MATERIALES','http://www.mediateca.prepa6.unam.mx/?page_id=1092');
 
-
-                                                                                                          var captura =new carta('../resources/images/ima12.jpg','CAPTURA EXAMEN','../programs/php/captura-examen.php');
+                                                                                                          var plan =new carta('../../resources/images/ima11.png','PLAN DE TRABAJO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf');
 
 
+                                                                                                          var captura =new carta('../../resources/images/ima12.jpg','CAPTURA EXAMEN','../programs/php/captura-examen.php');
 
-                                                                $('#primer').html('<div class="col s12 m6 "><div class="card horizontal"><div class="card-image"><img src="'+taller.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+taller.titu+'</p></div><div class="card-action"><a href="'+taller.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');        
+
+
+                                                                $('#primer').html('<div class="col s12 m6 "><div class="card horizontal"><div class="card-image"><img src="'+taller.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+taller.titu+'</p></div><div class="card-action"><a href="'+taller.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>'); 
+
                                                                 $('#segund').html('<div class="col s12 m6 "><div class="card horizontal"><div class="card-image"><img src="'+audio.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+audio.titu+'</p></div><div class="card-action"><a href="'+audio.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');                
-                                                                $('#tercer').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+asesor.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+asesor.titu+'</p></div><div class="card-action"><a href="'+asesor.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');        
+                                                                $('#tercer').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+asesor.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+asesor.titu+'</p></div><div class="card-action"><a href="'+asesor.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');  
+
                                                                 $('#cuarto').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+lab.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+lab.titu+'</p></div><div class="card-action"><a href="'+lab.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                                
                                                                 $('#quinto').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+revis.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+revis.titu+'</p></div><div class="card-action"><a href="'+revis.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');        
+                                                                
                                                                 $('#sexto').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+encu.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+encu.titu+'</p></div><div class="card-action"><a href="'+encu.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');        
+                                                                
                                                                 $('#sept').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+certif.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+certif.titu+'</p></div><div class="card-action"><a href="'+certif.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');                        
                                                                 $('#oct').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+beca.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+beca.titu+'</p></div><div class="card-action"><a href="'+beca.accion+'"  class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                                
                                                                 $('#nov').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+apren.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+apren.titu+'</p></div><div class="card-action"><a href="'+apren.accion+'"  class="indigo-text">ENTRA</a></div></div></div></div>');
-                                                               
-
-
-
+                                                             
                                                                 $('#primerPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+becaProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+becaProf.titu+'</p></div><div class="card-action"><a href="'+becaProf.accion+'" class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                                
                                                                 $('#segundoPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+semProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+semProf.titu+'</p></div><div class="card-action"><a href="'+semProf.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
 
                                                                 $('#terceroPr').html('<div class="col s12 m6"><div class="card horizontal "><div class="card-image"><img src="'+captura.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+captura.titu+'</p></div><div class="card-action"><a href="'+captura.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
 
-
-
-
-
-                                                                
-
                                                                 $('#mater').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+mater.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+mater.titu+'</p></div><div class="card-action"><a href="'+mater.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                                
                                                                 $('#plan').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+plan.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+plan.titu+'</p></div><div class="card-action"><a href="'+plan.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');                        
 
 																

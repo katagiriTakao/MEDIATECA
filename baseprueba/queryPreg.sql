@@ -1,4 +1,4 @@
-insert into preguntas (id,preguntas,inA,inB,inC,inD) values (1,"i want some_.","taquitos","torta","burgers","chicken");
-insert into preguntas (id,preguntas,inA,inB,inC,inD) values (2,"you want some_.","taquitos","torta","burgers","chicken");
-insert into preguntas (id,preguntas,inA,inB,inC,inD) values (3,"we want some_.","taquitos","torta","burgers","chicken");
-insert into preguntas (id,preguntas,inA,inB,inC,inD) values (4,"they want some_.","taquitos","torta","burgers","chicken");
+insert into preguntas (preguntas,inA,inB,inC,inD,id_tema) values ("i want some_.","taquitos","torta","burgers","chicken","123edf");
+insert into preguntas (preguntas,inA,inB,inC,inD,id_tema) values ("you want some_.","taquitos","torta","burgers","chicken","123edf");
+insert into preguntas (preguntas,inA,inB,inC,inD,id_tema) values ("we want some_.","taquitos","torta","burgers","chicken","123edf");
+insert into preguntas (preguntas,inA,inB,inC,inD,id_tema) values ("they want some_.","taquitos","torta","burgers","chicken","123edf");
