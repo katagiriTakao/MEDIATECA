@@ -37,7 +37,7 @@ include('menu.php');
 											<div class='col s12 m4'>
 											  <div class='card'>
 												<div class='card-image'>
-												  <img src='../../resources/images/escribe.jp'>	  
+												  <img src='../../resources/images/escribe.jpg'>	  
 												</div>
 												<div class='card-content'>
 												  <p>Plan</p>

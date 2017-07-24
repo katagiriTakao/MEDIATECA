@@ -125,8 +125,8 @@ echo			"<body>
 												<center>
 													<div><a href='matingles.php' title='INGLES'>INGLES</a></div>
 													<div><a href='matfrances.php' title='FRANCES'>FRANCES</a></div>
-													<div><a href='#' title='ALEMAN'>ALEMAN</a></div>
-													<div><a href='#' title='ITALIANO'>ITALIANO</a></div>
+													<div><a href='mataleman.php' title='ALEMAN'>ALEMAN</a></div>
+													<div><a href='matitali.php' title='ITALIANO'>ITALIANO</a></div>
 													<div><a href='http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf' target='_blank' title='PLAN'>PLAN DE TRABAJO</a></div>
 												</center>
 											</div>

@@ -21,11 +21,13 @@
 			 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			 <!---Estilo menu------------>
 			 <link  type="text/css" rel="stylesheet" href="../styles/estilado.css">
-			 <!---Estilo general--->
+		
+
 			 <link  type="text/css" rel="stylesheet" href="../styles/estilo.css">
-			 <!---Iconos--------------------------------------------------->
+			
+
 			 <link type="text/css" rel="stylesheet" href="../resources/fonts/sube.css">
-			 <!---------jquery--del boton arriba------------------------------------------------->
+			
 			 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 			 <script>
 								
@@ -167,8 +169,8 @@
 												<center>
 													<div><a href="../programs/php/matingles.php" title="INGLES">INGLES</a></div>
 													<div><a href="../programs/php/matfrances.php" title="FRANCES">FRANCES</a></div>
-													<div><a href="#" title="ALEMAN">ALEMAN</a></div>
-													<div><a href="#" title="ITALIANO">ITALIANO</a></div>
+													<div><a href="../programs/php/mataleman.php" title="ALEMAN">ALEMAN</a></div>
+													<div><a href="../programs/php/matitali.php" title="ITALIANO">ITALIANO</a></div>
 													<div><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf" target="_blank" title="PLAN">PLAN DE TRABAJO</a></div>
 												</center>
 											</div>
@@ -337,25 +339,30 @@
 																					this.accion=enlace;
                                                                     }
 
-                                                                										  var apren = new carta('https://www.intelligent.com/wp-content/uploads/2013/06/chapter_pic02-1.jpg','APRENDIZAJE AUTODIRIGIDO','../programs/php/plan.php');
+                                                                										  var apren = new carta('../resources/images/ima1.jpg','APRENDIZAJE AUTODIRIGIDO','../programs/php/plan.php');
                                                                                                           var taller = new carta('http://www.mediateca.prepa6.unam.mx/laboratorios/imgs/LI1.jpg','TALLERES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/Programa1.pdf');  
-                                                                                                          var audio = new carta('http://planetalibro.net/img/audiolibros.jpg','AUDIOLIBROS','http://www.mediateca.prepa6.unam.mx/?page_id=239');
+                                                                                                          var audio = new carta('../resources/images/ima3.jpg','AUDIOLIBROS','http://www.mediateca.prepa6.unam.mx/?page_id=239');
 
-                                                                                                          var asesor = new carta('http://pizarronesaries.com.mx/wp-content/uploads/2014/10/pizarron-verde.jpg','ASESORES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/05/HORARIO-ASESORES-16-17_020517.pdf');
-                                                                                                          var lab = new carta('http://colegioalboradacoyhaique.cl/2015/wp-content/uploads/2015/05/m_514.jpg','LABORATORIO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/03/Laboratorio_Multimedia_17_Marzo.pdf');
+                                                                                                          var asesor = new carta('../resources/images/ima4.jpg','ASESORES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/05/HORARIO-ASESORES-16-17_020517.pdf');
+                                                                                                          var lab = new carta('../../resources/images/ima5.jpg','LABORATORIO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/03/Laboratorio_Multimedia_17_Marzo.pdf');
 
-                                                                                                          var revis = new carta('https://pbs.twimg.com/profile_images/1595572932/PREPA_666_400x400.png','REVISTA','https://view.joomag.com/mi-mediateca/0938958001470151257?short');
-                                                                                                          var encu = new carta('http://gcrh.com.mx/wp-content/uploads/encuesta_grande.jpg','ENCUESTA','https://docs.google.com/forms/d/e/1FAIpQLSdr-F3b-USKrQ_oAfbPker62Fige3ljfI1G0Yo5jypCtJw8vg/viewform?c=0&w=1');
+                                                                                                          var revis = new carta('../resources/images/ima6.png','REVISTA','https://view.joomag.com/mi-mediateca/0938958001470151257?short');
 
-                                                                                                          var certif = new carta ('http://www.vexillologymatters.org/images/united_kingdom.png','CERTIFICACIONES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/PI-CIA_-SEDE.pdf');
-                                                                                                          var beca = new carta ('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1280px-Flag_of_Europe.svg.png','BECAS','../programs/php/becaalu.php');
+                                                                                                          var encu = new carta('../resources/images/ima6.1.jpg','ENCUESTA','https://docs.google.com/forms/d/e/1FAIpQLSdr-F3b-USKrQ_oAfbPker62Fige3ljfI1G0Yo5jypCtJw8vg/viewform?c=0&w=1');
+
+                                                                                                          var certif = new carta ('../resources/images/ima7.png','CERTIFICACIONES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/PI-CIA_-SEDE.pdf');
+
+                                                                                                          var beca = new carta ('../resources/images/ima7.1.png','BECAS','../programs/php/becaalu.php');
                                                                                                           var becaProf = new carta ('http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/08/becas1-150x150.png','BECAS PARA PROFESORES','../programs/php/becaprofe.php');
+
                                                                                                           var semProf =new carta('http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/08/Seminario-mediateca2-150x150.jpg','REGISTRO AL SEMINARIO','https://docs.google.com/forms/d/e/1FAIpQLSd2F66HnOWcmnAeGPL_FDjB_CE-AkaV5A4UV-FGZ6Qck38QLA/viewform?c=0&w=1');
-                                                                                                          var mater =new carta('http://www.lifeder.com/wp-content/uploads/2016/07/blogs-para-aprender-ingl%C3%A9s.jpg','MATERIALES','http://www.mediateca.prepa6.unam.mx/?page_id=1092');
-                                                                                                          var plan =new carta('https://contadormx.com/wp-content/uploads/2015/10/formas-y-formatos-del-sat.png','PLAN DE TRABAJO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf');
+
+                                                                                                          var mater =new carta('../resources/images/ima10.jpg','MATERIALES','http://www.mediateca.prepa6.unam.mx/?page_id=1092');
+
+                                                                                                          var plan =new carta('../resources/images/ima11.png','PLAN DE TRABAJO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf');
 
 
-                                                                                                          var captura =new carta('http://www.blogdelaautoescuela.com/america/wp-content/uploads/2013/06/TOEFL200000000001.jpg','CAPTURA EXAMEN','../programs/php/captura-examen.php');
+                                                                                                          var captura =new carta('../resources/images/ima12.jpg','CAPTURA EXAMEN','../programs/php/captura-examen.php');
 
 
 

@@ -46,7 +46,7 @@
 
 				echo "<br/>"; 
 				$arre1=array('A','J','D','S','S');
-				$arre2=array('B','H','D','G','S');
+				$arre2=array('B','H','D','S','S');
 
 				$resultado = array_diff_assoc($arre2, $arre1);
 
@@ -109,6 +109,7 @@
 					
 
 					$calif+=$ki;
+
 					$varstri=(string)$ki;
 					
 					switch ($varstri)  {
@@ -146,9 +147,12 @@
 
 						
 						};
-						echo $calif;
+					
 						
-				echo "</table>"
+				echo "</table>";
+
+
+					echo "tu calificación es de".$calif."/5";
 
 
 ?>
