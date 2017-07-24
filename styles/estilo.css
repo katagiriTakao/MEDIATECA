@@ -1,6 +1,6 @@
 body{
 	
-	background-image:url('https://skatesofglory.files.wordpress.com/2014/04/white-pattern-by-dream-theme-com.png');
+	background-image:url('../resources/images/fondo.png');
 	background-size:100vw 100vh;
 	background-attachment:fixed;
 }
