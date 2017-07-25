@@ -2,11 +2,11 @@
 
 	include ('menu.php');
 
-				$conn = new mysqli('localhost', 'root', '','prueba_preguntas');
+				$conn = new mysqli('localhost', 'root','','prueba_preguntas');
 
 				
 				if ($conn->connect_error) {
-				    die("Connection failed: " . $conn->connect_error);
+				    die("Connection failed: ". $conn->connect_error);
 				} 
 				echo "Connected successfully";
 
@@ -18,12 +18,12 @@
 
 
 
-	$modulo2 = "SELECT * FROM modulo JOIN sesiones ON modulo.id_sesiones=sesiones.id_sesiones JOIN catalogo ON sesiones.id_materiales=catalogo.id_materiales JOIN asesor ON sesiones.id_asesor=asesor.id_asesor";
+	$modulo2 = "SELECT * FROM modulo JOIN sesiones ON modulo.id_sesiones=sesiones.id_sesiones JOIN materi_sesio ON sesiones.id_mat_sesi=materi_sesio.id_mat_sesi JOIN catalogo ON materi_sesio.clasificacion=catalogo.clasificacion";
 
 
 
 
-	$modulo3 = "SELECT * FROM modulo JOIN examenes ON modulo.id_diagnostico=examenes.id_diagnostico JOIN chequeo ON examenes.id_tipo=chequeo.id_tipo JOIN registroResp ON chequeo.registro_res=registroResp.registro_res JOIN respu ON chequeo.id_respues=respu.id_respues";
+	$modulo3 = "SELECT * FROM modulo JOIN examenes ON modulo.id_diagnostico=examenes.id_diagnostico JOIN chequeo ON examenes.id_examRegistrado=chequeo.id_examRegistrado JOIN registroResp ON chequeo.registro_res=registroResp.registro_res JOIN respu ON chequeo.id_respues=respu.id_respues";
 
 
 
