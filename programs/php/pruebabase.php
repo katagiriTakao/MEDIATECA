@@ -64,9 +64,11 @@
 
 						<input type='submit' />
 						</form>";
-				mysqli_close($conn);
-				echo $recibir=$_GET['resp'];						
+			
+				echo $recibir=$_GET['resp'];
+				mysqli_close($conn);						
 				echo "
+
 				<script>
 					$(document).ready(function() {
     					$('select').material_select();
