@@ -14,10 +14,10 @@
 		// En caso que la conexion sea exitosa, se mete al programa
 		else{
 			$cuenta=$_POST['cuenta'];
-			$resultado=mysqli_query($conexion, "SELECT * FROM asesor WHERE id_asesor='".$cuenta."';");
+			$resultado=mysqli_query($conexion, "SELECT * FROM asesor WHERE clave='".$cuenta."';");
 			$consulta=mysqli_fetch_assoc($resultado);
 			$contra=$_POST['contra'];
-			$asesor=$consulta["id_asesor"];	
+			$asesor=$consulta["numet"];	
 			$nasesor=$consulta['nombre'];
 				//Comprobar si el usuario existe
 			if ($nasesor=="")
