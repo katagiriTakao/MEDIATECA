@@ -15,31 +15,39 @@ describe modulo;
 
 create table sesiones
 	(id_sesiones int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
-	no_cta varchar(10) ,
-	hora_entrada varchar(5),
-	hora_salida varchar(5),
-	id_mat_sesi int(3),
-	id_asesor varchar(7) 
+	fecha varchar(15),
+	no_cta varchar(10),
+	nombre varchar(40),
+	hora_entrada varchar(15),
+	hora_salida varchar(15),
+	tiempo int(4),
+	id_mat_sesi int(3)
+	
 		);
 
 describe sesiones;
 
 create table califica
 	(no_cta varchar(10) NOT NULL PRIMARY KEY,
-	nombre  varchar(50),
-	idioma varchar(30),
-	calificaciones varchar(40)
+	ApPat  varchar(50),
+	ApMat  varchar(50),
+	Nombre  varchar(50),
+	CLAVEASIGN varchar(30),
+	CALBIM1 varchar(4),
+	CALBIM2 varchar(4),
+	CALBIM3 varchar(4),
+	GRUPO varchar(6)
 
 		);
 
 create table materi_sesio
 	(id_mat_sesi int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	id_materiales varchar(10)
+	clasificacion varchar(10)
 		);
 
 create table catalogo
-	(id_materiales varchar(10) NOT NULL PRIMARY KEY,
-	nombre_mat varchar(50),
+	(clasificacion varchar(10) NOT NULL PRIMARY KEY,
+	titulo varchar(50),
 	descripc varchar(200),
 	id_tema varchar(10) 
 
@@ -51,12 +59,13 @@ create table temas
 
 create table examenes
 	(id_diagnostico int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
-	id_tipo char(2) 
+	id_examRegistrado INT(3)
 		);
 
 create table chequeo
 
-	(id_tipo char(2) NOT NULL PRIMARY KEY,
+	(id_examRegistrado INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	id_tipo char(2),
 	result varchar(400),
 	registro_res char(2),
 	id_respues char(2),
@@ -87,9 +96,11 @@ create table preguntas
 		);
 
 create table asesor 
-	(id_asesor varchar(7) NOT NULL PRIMARY KEY,
-	nombre_as varchar(40),
-	grupos varchar (30)
+	(grupo varchar (50),
+	nombre varchar(40),
+	numet varchar(5) NOT NULL PRIMARY KEY,
+	clave varchar(5)
+	
 
 		);
 
@@ -99,7 +110,9 @@ create table alumno_comen
 
 		);
 create table profe_comen
-	(comen_prof int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	(id_comen_prof int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	prof varchar(5),
+	alumno_destino varchar(10),	
 	comentario varchar(1000)
 		);
 
@@ -111,15 +124,14 @@ ALTER TABLE modulo ADD FOREIGN KEY (comen_prof) REFERENCES profe_comen(comen_pro
 
 ALTER TABLE sesiones ADD FOREIGN KEY (no_cta) REFERENCES califica(no_cta);
 ALTER TABLE sesiones ADD FOREIGN KEY (id_mat_sesi) REFERENCES materi_sesio(id_mat_sesi);
-ALTER TABLE sesiones ADD FOREIGN KEY (id_asesor) REFERENCES asesor(id_asesor);
 
 
-ALTER TABLE materi_sesio ADD FOREIGN KEY (id_materiales) REFERENCES catalogo(id_materiales);
+ALTER TABLE materi_sesio ADD FOREIGN KEY (clasificacion) REFERENCES catalogo(clasificacion);
 
 
 ALTER TABLE catalogo ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
 
-ALTER TABLE examenes ADD FOREIGN KEY (id_tipo) REFERENCES chequeo(id_tipo);
+ALTER TABLE examenes ADD FOREIGN KEY (id_examRegistrado) REFERENCES chequeo(id_examRegistrado);
 
 
 
@@ -129,4 +141,7 @@ ALTER TABLE preguntas ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
 ALTER TABLE chequeo ADD FOREIGN KEY (id_respues) REFERENCES respu(id_respues);
 
 ALTER TABLE chequeo ADD FOREIGN KEY (registro_res) REFERENCES registroResp(registro_res);
+
+
+
 
