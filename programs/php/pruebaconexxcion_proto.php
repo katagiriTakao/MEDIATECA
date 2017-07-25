@@ -51,7 +51,7 @@
 
 			echo "</br></br><h1>modulo/sesiones</h1></br></br>";
 
-			echo " numero de sesion ".$fila2['id_sesiones']." </br>num cuenta ".$fila2['no_cta']."</br>hora de entrada ".$fila2['hora_entrada']." </br>hora de salida ".$fila2['hora_salida']." </br>material utilizado ".$fila2['id_materiales']."</br>nombre del material ".$fila2['nombre_mat']." </br>asesor ".$fila2['id_asesor']." </br>nombre dle asesor ".$fila2['nombre'];
+			echo " numero de sesion ".$fila2['id_sesiones']." </br>num cuenta ".$fila2['no_cta']."</br>hora de entrada ".$fila2['hora_entrada']." </br>hora de salida ".$fila2['hora_salida']." </br>material utilizado ".$fila2['id_materiales']."</br>nombre del material ".$fila2['nombre_mat']." </br>asesor ".$fila2['id_asesor']." </br>nombre del asesor ".$fila2['nombre'];
 
 
 
