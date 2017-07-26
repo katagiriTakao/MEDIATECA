@@ -45,8 +45,13 @@
 
 
 				echo "<br/>"; 
-				$arre1=array('A','J','D','S','S');
-				$arre2=array('B','H','D','S','S');
+
+
+				//$arre1=array('A','J','D','S','S');
+				//$arre2=array('B','H','D','S','S');
+
+				$recp=$_GET['resp'];
+
 
 				$resultado = array_diff_assoc($arre2, $arre1);
 
