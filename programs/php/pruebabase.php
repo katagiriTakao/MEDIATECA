@@ -15,7 +15,7 @@
 
 				
 
-				$pregun="select * from preguntas  join temas on preguntas.id_tema=temas.id_tema order by rand()";
+				$pregun="select * from preguntasin  join temas on preguntasin.id_tema=temas.id_tema order by rand()";
 
 				echo $pregun;
 
@@ -26,7 +26,7 @@
 				if (mysqli_num_rows($result) > 0) {
 				    // output data of each row
 				    while($row = mysqli_fetch_assoc($result)) {
-				        $pregunta = explode ("_",$row["preguntas"]);
+				        $pregunta = explode ("_",$row["preguntasin"]);
 				       
 				        echo "<div class='container center-align'>";
 
@@ -42,10 +42,10 @@
 							     echo 						"<div class='input-field col m4'>
 														    <select name=".$pregunNumb.">
 			 											      <option value='' disabled selected></option>
-														      <option value='A'>".$row["inA"]."</option>
-														      <option value='B'>".$row["inB"]."</option>
-														      <option value='C'>".$row["inC"]."</option>
-														      <option value='D'>".$row["inD"]."</option>
+														      <option value='A'>".$row["in_A"]."</option>
+														      <option value='B'>".$row["in_B"]."</option>
+														      <option value='C'>".$row["in_C"]."</option>
+														      <option value='D'>".$row["in_D"]."</option>
 														    </select>
 														   </div>
 														   <div class='col m4'><div class='col '></br>".$pregunta[1]."</div></div>

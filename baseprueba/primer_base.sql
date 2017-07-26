@@ -8,10 +8,10 @@ create table modulo
 	id_sesiones int(3),
 	id_diagnostico int(3),
 	comen_alum int(3),
-	comen_prof int(3)
+	id_comen_prof int(3)
 	);
 
-describe modulo;
+
 
 create table sesiones
 	(id_sesiones int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
@@ -25,7 +25,7 @@ create table sesiones
 	
 		);
 
-describe sesiones;
+
 
 create table califica
 	(no_cta varchar(10) NOT NULL PRIMARY KEY,
@@ -59,41 +59,128 @@ create table temas
 
 create table examenes
 	(id_diagnostico int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
-	id_examRegistrado INT(3)
+	id_ingles char(2),
+	id_frances char(2),
+	id_tipo_aleman char(2),
+	id_italiano char(2)
 		);
 
-create table chequeo
 
-	(id_examRegistrado INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	id_tipo char(2),
+create table chequeoIN
+
+	(id_ingles char(2) NOT NULL PRIMARY KEY,
 	result varchar(400),
-	registro_res char(2),
+	registro_res int(3),
 	id_respues char(2),
 	id_preg int(3)
 	
 		);
-create table respu
+create table chequeoFR
+
+	(id_frances char(2) NOT NULL PRIMARY KEY,
+	result varchar(400),
+	registro_res int(3),
+	id_respues int(3),
+	id_preg int(3)
+	
+		);
+create table chequeoIT
+
+	(id_italiano char(2) NOT NULL PRIMARY KEY,
+	result varchar(230),
+	registro_res int(3),
+	id_respues char(2),
+	id_preg int(3)
+	
+		);
+create table tipoAL
+	(id_tipo_aleman char(2) NOT NULL PRIMARY KEY,
+	tipo char(2)
+
+		);
+create table chequeoAL
+	(tipo char(2) NOT NULL PRIMARY KEY,
+	result varchar(230),
+	registro_res int(3),
+	id_respues char(2),
+	id_preg int(3)
+
+		);
+
+
+create table respuIN
 
 	(id_respues char(2) NOT NULL PRIMARY KEY,
 	respues varchar(500)
 
 		);
+create table respuIT
 
-create table registroResp
-	(registro_res char(2) NOT NULL PRIMARY KEY,
+	(id_respues char(2) NOT NULL PRIMARY KEY,
+	respues varchar(300)
+
+		);
+create table respuAL 
+	(id_respues char(2) NOT NULL PRIMARY KEY,
+	respues varchar(480)
+		);
+
+
+
+
+create table registroRespIN
+	(registro_res int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	alumno varchar(10),
 	registros varchar(500)
 
 		);
+create table registroRespFR
+	(registro_res int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	alumno varchar(10),
+	registros longblob
 
-create table preguntas
+		);
+create table registroRespAL
+	(registro_res int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	alumno varchar(10),
+	registros longblob
+
+		);
+create table registroRespIT
+	(registro_res int(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	alumno varchar(10),
+	registros longblob
+
+		);
+
+
+
+
+create table preguntasIN
 	(id_preg int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
 	preguntas varchar(50),
-	inA varchar(20),
-	inB varchar(20),
-	inC varchar(20),
-	inD varchar(20),
-	id_tema varchar(10) 
+	in_A varchar(30),
+	in_B varchar(30),
+	in_C varchar(30),
+	in_D varchar(30),
+	id_tema varchar(10)
+
 		);
+create table preguntasIT
+	(id_preg int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
+	preguntas varchar(50)
+
+		);
+create table preguntasAL
+	(id_preg int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
+	preguntas varchar(50)
+
+		);
+
+
+
+
+
 
 create table asesor 
 	(grupo varchar (50),
@@ -120,7 +207,7 @@ ALTER TABLE modulo ADD FOREIGN KEY (no_cta) REFERENCES califica(no_cta);
 ALTER TABLE modulo ADD FOREIGN KEY (id_sesiones) REFERENCES sesiones(id_sesiones);
 ALTER TABLE modulo ADD FOREIGN KEY (id_diagnostico) REFERENCES examenes(id_diagnostico);
 ALTER TABLE modulo ADD FOREIGN KEY (comen_alum) REFERENCES alumno_comen(comen_alum);
-ALTER TABLE modulo ADD FOREIGN KEY (comen_prof) REFERENCES profe_comen(comen_prof);
+ALTER TABLE modulo ADD FOREIGN KEY (id_comen_prof) REFERENCES profe_comen(id_comen_prof);
 
 ALTER TABLE sesiones ADD FOREIGN KEY (no_cta) REFERENCES califica(no_cta);
 ALTER TABLE sesiones ADD FOREIGN KEY (id_mat_sesi) REFERENCES materi_sesio(id_mat_sesi);
@@ -131,16 +218,25 @@ ALTER TABLE materi_sesio ADD FOREIGN KEY (clasificacion) REFERENCES catalogo(cla
 
 ALTER TABLE catalogo ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
 
-ALTER TABLE examenes ADD FOREIGN KEY (id_examRegistrado) REFERENCES chequeo(id_examRegistrado);
+ALTER TABLE examenes ADD FOREIGN KEY (id_ingles) REFERENCES chequeoIN(id_ingles);
+ALTER TABLE examenes ADD FOREIGN KEY (id_frances) REFERENCES chequeoFR(id_frances);
+ALTER TABLE examenes ADD FOREIGN KEY (id_italiano) REFERENCES chequeoIT(id_italiano);
 
 
 
-ALTER TABLE chequeo ADD FOREIGN KEY (id_preg) REFERENCES preguntas(id_preg);
-ALTER TABLE preguntas ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
+ALTER TABLE chequeoIN ADD FOREIGN KEY (id_preg) REFERENCES preguntasIN(id_preg);
+ALTER TABLE chequeoIT ADD FOREIGN KEY (id_preg) REFERENCES preguntasIT(id_preg);
+ALTER TABLE chequeoAL ADD FOREIGN KEY (id_preg) REFERENCES preguntasAL(id_preg);
 
-ALTER TABLE chequeo ADD FOREIGN KEY (id_respues) REFERENCES respu(id_respues);
+ALTER TABLE preguntasIN ADD FOREIGN KEY (id_tema) REFERENCES temas(id_tema);
 
-ALTER TABLE chequeo ADD FOREIGN KEY (registro_res) REFERENCES registroResp(registro_res);
+ALTER TABLE chequeoIN ADD FOREIGN KEY (id_respues) REFERENCES respuIN(id_respues);
+ALTER TABLE chequeoIT ADD FOREIGN KEY (id_respues) REFERENCES respuIT(id_respues);
+ALTER TABLE chequeoAL ADD FOREIGN KEY (id_respues) REFERENCES respuAL(id_respues);
+
+ALTER TABLE chequeoIN ADD FOREIGN KEY (registro_res) REFERENCES registroRespIN(registro_res);
+ALTER TABLE chequeoIT ADD FOREIGN KEY (registro_res) REFERENCES registroRespIT(registro_res);
+ALTER TABLE chequeoAL ADD FOREIGN KEY (registro_res) REFERENCES registroRespAL(registro_res);
 
 
 

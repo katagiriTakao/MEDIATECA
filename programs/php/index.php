@@ -59,8 +59,8 @@
 												<nav class="nav-extended">
 													<div class="nav-wrapper  light-blue darken-1" style="height:120px;">
 														<a href="https://www.unam.mx/" target="_blank" class="brand-logo hide-on-med-and-down"><img src="https://www.unam.mx/sites/all/themes/unam/logo.png" height="120px"/></a>
-														<a href="index.html" class="brand-logo right hide-on-med-and-down"><img src="../resources/images/bande.png" height="110px"/></a>
-														<a href="index.html" class="brand-logo center"><img src="../resources/images/logo.png" height="120px"/></a>
+														<a href="index.html" class="brand-logo right hide-on-med-and-down"><img src="../../resources/images/bande.png" height="110px"/></a>
+														<a href="index.html" class="brand-logo center"><img src="../../resources/images/logo.png" height="120px"/></a>
 													</div>
 												</nav>	
 												<nav>
