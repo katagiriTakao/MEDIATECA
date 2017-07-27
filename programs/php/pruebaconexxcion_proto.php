@@ -13,7 +13,7 @@
 				echo "</br>";
 
 
-
+	$pruebaimage="SELECT * FROM picture";
 	$modulo1 = "SELECT * FROM modulo JOIN califica ON modulo.no_cta=califica.no_cta";
 
 
@@ -30,12 +30,12 @@
 	
 //	$evaluacion2="SELECT * FROM examenes JOIN chequeo ON examenes.id_tipo=chequeo.id_tipo JOIN registroResp ON chequeo.registro_res=registroResp.registro_res JOIN respu ON chequeo.id_respues=respu.id_respues";
 
-
+	$pruebaimages=mysqli_query($conn,$pruebaimage);
 	$res=mysqli_query($conn,$modulo1);
 	$cerdo=mysqli_query($conn,$modulo2);
 	$pollo=mysqli_query($conn,$modulo3);
 
-	
+	$image=mysqli_fetch_assoc($pruebaimages);
 	$fila=mysqli_fetch_assoc($res);
 	$fila2=mysqli_fetch_assoc($cerdo);
 	$fila3=mysqli_fetch_assoc($pollo);
@@ -43,7 +43,12 @@
 
 
 
-		
+			echo $image['ID']."".$image["IMAGE"];
+			ECHO "<img=src='".$image["IMAGE"]."'></img>";
+
+
+			echo '<img src="data:image/png;base64,'.base64_encode($image["IMAGE"]).'"/>';
+
 			echo "</br><h1>modulo/califica</h1></br>";
 			echo" ".$fila['no_cta']." ".$fila['idioma']." ".$fila['nombre']." ".$fila['calificaciones']." ";	
 
