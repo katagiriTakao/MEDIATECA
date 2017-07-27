@@ -4,6 +4,7 @@ session_start();
 
 include('menu.php');
 
+<<<<<<< HEAD
 
 $usuario_alum=$SESSION['id'];
 
@@ -80,6 +81,32 @@ $usuario_alum=$SESSION['id'];
 			echo     " id diagnostico  ".$fila3['id_diagnostico']." </br>tipo de examen  ".$fila3['id_tipo']." resultados   ".$fila3['result']."  </br>tipo de respuestas  ".$fila3['registro_res']." </br>respuestas del alumno   ".$fila3['registros']."  </br>idioma de las respuestas  ".$fila3['id_respues']."  </br>respuestas correctas  ".$fila3['respues']." ";
 
 
+=======
+$usuario_alum=$SESSION['id'];
+
+		echo"<meta http-equiv='Content-Type' content='text/html' charset='utf-8' />";
+
+		$conn = new mysqli('localhost', 'root', '','prueba_preguntas');
+
+						
+						if ($conn->connect_error) {
+						    die("Connection failed: " . $conn->connect_error);
+						} 
+				echo "Connected successfully</br></br>";
+
+		$sacar="SELECT * FROM profe_comen WHERE alumno_destino=".$usuario_alum." ";
+		$result = $conn->query($sacar);
+
+		echo "COMENTARIOS DE TUS PROFESORES</br></br>";
+		if ($result->num_rows > 0) {
+    // output data of each row
+		    while($row = $result->fetch_assoc()) {
+		        echo "profesor: " . $row["prof"]. " - comentario " . $row["comentario"]."</br>";
+		    }
+		} else {
+		    echo "0 results";
+		}
+>>>>>>> isac
 
 
 
