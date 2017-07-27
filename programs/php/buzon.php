@@ -1,10 +1,47 @@
 <?php
 
 include('menu.php');
+//_------------------------------------------------------
+$conn = new mysqli('localhost', 'root', '','prueba_preguntas');
 
+				
+				if ($conn->connect_error) {
+				    die("Connection failed: " . $conn->connect_error);
+				} 
+				echo "Connected successfully";
+
+
+$tildes = $conn->query("SET NAMES 'utf8'"); //Para que se inserten las tildes correctamente
+
+
+
+//hay que checar esto porque no es más que ponerle seda a la mona.
+//error_reporting(0);
+//ini_set('display_errors', 0);
+//basicamente le estoy diciendo, me valen gorro tus errores
+
+
+
+$comen=$_POST['mensaje'];
+$prof=$_POST['cuenta'];
+$alumno=$_POST['alumno'];
+
+$query='SELECT * FROM profe_comen WHERE nombre_usuario="'.$alumno.'"';
+
+	$res=mysqli_query($conn,$query);
+	$resultado=mysqli_fetch_assoc($res);
+	$usuario=$resultado["alumno_destino"];
+	SESSION_start();
+	$SESSION['alumno']=$usuario;
+
+
+$guarda= mysqli_query($conn, "INSERT INTO profe_comen (prof,alumno_destino,comentario) VALUES ('".$prof."','".$alumno."','".$comen."');");
+
+
+//_----------------------------------------------------
 echo "
 	<div class='row' align='center'>		
-		<form class='col s12' method='POST' action='g-buzon.php'>
+		<form class='col s12' method='POST' action='buzon.php'>
 				<div class='modal-content'>
 					<h4 align='center'>Buzón</h4>
 					<div class='row'>

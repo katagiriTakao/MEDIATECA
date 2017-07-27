@@ -1,6 +1,35 @@
 <?php
 
+session_start();
+
 include('menu.php');
+
+$usuario_alum=$SESSION['id'];
+
+		echo"<meta http-equiv='Content-Type' content='text/html' charset='utf-8' />";
+
+		$conn = new mysqli('localhost', 'root', '','prueba_preguntas');
+
+						
+						if ($conn->connect_error) {
+						    die("Connection failed: " . $conn->connect_error);
+						} 
+				echo "Connected successfully</br></br>";
+
+		$sacar="SELECT * FROM profe_comen WHERE alumno_destino=".$usuario_alum." ";
+		$result = $conn->query($sacar);
+
+		echo "COMENTARIOS DE TUS PROFESORES</br></br>";
+		if ($result->num_rows > 0) {
+    // output data of each row
+		    while($row = $result->fetch_assoc()) {
+		        echo "profesor: " . $row["prof"]. " - comentario " . $row["comentario"]."</br>";
+		    }
+		} else {
+		    echo "0 results";
+		}
+
+
 		echo"	<div class'container'>
 					<div class='row'>";
 						echo "  
