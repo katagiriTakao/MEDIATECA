@@ -195,8 +195,6 @@ create table asesor
 	nombre varchar(40),
 	numet varchar(5) NOT NULL PRIMARY KEY,
 	clave varchar(5)
-	
-
 		);
 
 create table alumno_comen 
