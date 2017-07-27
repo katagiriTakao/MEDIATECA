@@ -30,6 +30,7 @@ create table sesiones
 create table califica
 	(no_cta varchar(10) NOT NULL PRIMARY KEY,
 	PLT varchar(5),
+	NIVEL varchar(10),
 	PLAN varchar(6),
 	CLAVEASIGN varchar(30),
 	GRUPO varchar(6),
@@ -39,9 +40,6 @@ create table califica
 	Fal1 int(3),
 	Fal2 int(3),
 	Fal3 int(3),
-	ApPat  varchar(50),
-	ApMat  varchar(50),
-	Nombre  varchar(50),
 	Obs varchar(2),
 	fecha varchar(10),
 	hora varchar(14),

@@ -16,8 +16,8 @@ $tildes = $conn->query("SET NAMES 'utf8'"); //Para que se inserten las tildes co
 
 
 //hay que checar esto porque no es más que ponerle seda a la mona.
-//error_reporting(0);
-//ini_set('display_errors', 0);
+error_reporting(0);
+ini_set('display_errors', 0);
 //basicamente le estoy diciendo, me valen gorro tus errores
 
 
