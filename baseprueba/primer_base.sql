@@ -29,15 +29,23 @@ create table sesiones
 
 create table califica
 	(no_cta varchar(10) NOT NULL PRIMARY KEY,
-	ApPat  varchar(50),
-	ApMat  varchar(50),
-	Nombre  varchar(50),
+	PLT varchar(5),
+	PLAN varchar(6),
 	CLAVEASIGN varchar(30),
+	GRUPO varchar(6),
 	CALBIM1 varchar(4),
 	CALBIM2 varchar(4),
 	CALBIM3 varchar(4),
-	GRUPO varchar(6)
-
+	Fal1 int(3),
+	Fal2 int(3),
+	Fal3 int(3),
+	ApPat  varchar(50),
+	ApMat  varchar(50),
+	Nombre  varchar(50),
+	Obs varchar(2),
+	fecha varchar(10),
+	hora varchar(14),
+	usu varchar(10)
 		);
 
 create table materi_sesio
