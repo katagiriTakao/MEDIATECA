@@ -20,7 +20,7 @@
 				echo $pregun;
 
 				echo "</br>";
-				echo "<form method='get' action='pruebabase.php'>";
+				echo "<form method='get' action='recepcionIN.php'>";
 				$result = mysqli_query($conn,$pregun);
 
 				if (mysqli_num_rows($result) > 0) {
@@ -35,9 +35,9 @@
 
 						        echo "<div class='col m4' id='preg'></br>".$pregunta[0]."</div>";
 						           $pregunNumb = $row["id_preg"];
-						           echo " id pregunta ".$pregunNumb;
+						        //   echo " id pregunta ".$pregunNumb;
 
-						          echo "  id tema ".$row['id_tema']." tema ".$row['tema'];
+						      //    echo "  id tema ".$row['id_tema']." tema ".$row['tema'];
 
 							     echo 						"<div class='input-field col m4'>
 														    <select name=".$pregunNumb.">
@@ -52,8 +52,7 @@
 							</div>
 							</div>";
 			            
-			            echo "<p id='debugResp'></p>";
- 
+			           
 
 			         
 				    }
