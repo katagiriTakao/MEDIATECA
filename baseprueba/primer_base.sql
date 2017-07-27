@@ -158,7 +158,7 @@ create table registroRespIT
 
 create table preguntasIN
 	(id_preg int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
-	preguntas varchar(50),
+	preguntas varchar(100),
 	in_A varchar(30),
 	in_B varchar(30),
 	in_C varchar(30),
@@ -168,12 +168,12 @@ create table preguntasIN
 		);
 create table preguntasIT
 	(id_preg int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
-	preguntas varchar(50)
+	preguntas varchar(120)
 
 		);
 create table preguntasAL
 	(id_preg int(3) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
-	preguntas varchar(50)
+	preguntas varchar(100)
 
 		);
 
