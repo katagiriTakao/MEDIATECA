@@ -1,6 +1,6 @@
 DELETE FROM preguntasin;
 ALTER TABLE preguntasin AUTO_INCREMENT=1;
-LOAD DATA INFILE 'C:/Users/MEDIATECA/Downloa/Bases1/Bases2/profe.csv' INTO TABLE asesor
+LOAD DATA INFILE 'C:/xampp/htdocs/MEDIATECA/baseprueba/bases/exam_ingles_preg2.csv' INTO TABLE preguntasin
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
