@@ -1,6 +1,6 @@
 <?php
 
-	include ('menu.php');
+	include ('htmlmenu.php');
 
 				$conn = new mysqli('localhost', 'root', '','prueba_preguntas');
 
@@ -15,51 +15,60 @@
 
 
 
-				$query='SELECT * from chequeo JOIN examenes  ON chequeo.id_tipo=examenes.id_tipo JOIN respu ON chequeo.id_respues=respu.id_respues JOIN registroresp ON  chequeo.registro_res=registroresp.registro_res';
+
+				$array_enviadas=array();
+
+
+
 				
+				$array_respu=array();
+
+			
+				$querIn="SELECT respues from respuin";
+				$connex=mysqli_query($conn,$querIn);
+			 
+		while( $printeo=mysqli_fetch_array($connex))
+			{
+
+				array_push($array_respu,$printeo['respues']);
+
+			}
+
+
+			print_r($array_respu);
 
 
 
 
-
-				$res=mysqli_query($conn,$query);
-				$fila=mysqli_fetch_assoc($res);
-
-
-				echo"Alumno: ".$fila['registros']." <br/> Correcto ".$fila['respues']." <br/>";	
+//________________________________________________________________________
 
 
 
+				$recp=$_POST['idioma'];
+				echo $recp;
+				for ($a=1;$a<=99;$a++){
 
-				$alures=(explode(',',$fila['registros']));
-
-				echo "<br/>";
-
-				$correctas=(explode(',',$fila['respues']));
-
-
-
-				print_r($correctas);
-
-				print_r($alures);
+					echo $a;
+					echo $_POST[$a];
+					array_push($array_enviadas,$_POST[$a]);
 
 
-				echo "<br/>"; 
+
+				}
+				print_r($array_enviadas);
 
 
-				//$arre1=array('A','J','D','S','S');
-				//$arre2=array('B','H','D','S','S');
-
-				$recp=$_GET['resp'];
 
 
-				$resultado = array_diff_assoc($arre2, $arre1);
+//___________________________________________________________________________________________
+
+				$resultado = array_diff_assoc($array_enviadas, $array_respu);
 
 				echo "Errores:"; print_r($resultado);
 
 				echo "<br/>";
 
-				$result_array = array_intersect_assoc($arre1, $arre2);
+				$result_array = array_intersect_assoc($array_enviadas, $array_respu);
 				
 				echo "Correctas:"; print_r($result_array);
 
@@ -70,11 +79,11 @@
 				$guarda=array();
 				$ava=0;
 
-				for ($ava=0;$ava<=4;$ava++){
+				for ($ava=0;$ava<=98;$ava++){
 
 
 
-					if ($arre1[$ava]==$arre2[$ava])
+					if ($array_enviadas[$ava]==$array_respu[$ava])
 
 					{
 						$guarda[$ava]=1;
@@ -157,7 +166,7 @@
 				echo "</table>";
 
 
-					echo "tu calificación es de".$calif."/5";
+					echo "tu calificación es de".$calif."/99";
 
 
 ?>

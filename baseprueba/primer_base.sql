@@ -131,7 +131,7 @@ create table chequeoFR
 	registro_res int(3),
 	id_respues char(2),
 	id_preg int(3)
-	
+	tipo char(2)
 		);
 create table chequeoIT
 
@@ -140,14 +140,15 @@ create table chequeoIT
 	registro_res int(3),
 	id_respues char(2),
 	id_preg int(3)
-	
+	tipo char(2)
 		);	
 create table chequeoAL
 	(id_aleman char(2) NOT NULL PRIMARY KEY,
 	result varchar(230),
 	registro_res int(3),
 	id_respues char(2),
-	id_preg int(3)
+	id_preg int(3),
+	tipo char(2)
 
 		);
 
