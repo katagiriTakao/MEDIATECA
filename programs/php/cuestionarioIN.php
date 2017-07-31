@@ -20,7 +20,7 @@
 				echo $pregun;
 
 				echo "</br>";
-				echo "<form method='get' action='recepcionIN.php'>";
+				echo "<form method='get' action='comparacion.php'>";
 				$result = mysqli_query($conn,$pregun);
 
 				if (mysqli_num_rows($result) > 0) {
@@ -46,6 +46,7 @@
 														      <option value='B'>".$row["in_B"]."</option>
 														      <option value='C'>".$row["in_C"]."</option>
 														      <option value='D'>".$row["in_D"]."</option>
+														      <input type='hidden' name='in'></input>
 														    </select>
 														   </div>
 														   <div class='col m4'><div class='col '></br>".$pregunta[1]."</div></div>

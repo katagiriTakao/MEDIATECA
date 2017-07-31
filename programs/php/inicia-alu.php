@@ -3,7 +3,7 @@
 
 /*En este php, se accede a los datos de la base de datos, se comprueba el usuario, asi como la contraseña y redirecciona segun el caso a los diferentes mensajes 
 	de error*/	
-	if (isset($_POST["cuenta"]) && isset($_POST['contra'])){
+	if (isset($_POST["cuentalu"]) && isset($_POST['contralu'])){
 		//Conexión a la base de datos
 				
 		
@@ -13,14 +13,14 @@
 		}
 		// En caso que la conexion sea exitosa, se mete al programa
 		else{
-			$cuenta=$_POST['cuenta'];
-			$resultado=mysqli_query($conexion, "SELECT * FROM califica WHERE no_cta='".$cuenta."';");
-			$consulta=mysqli_fetch_assoc($resultado);
-			$contra=$_POST['contra'];
 
-			$cualu=$consulta["no_cta"];	
+			$contralu=$_POST['contra'];
+			$cuentalu=$_POST['cuentalu'];
+			$resultado=mysqli_query($conexion, "SELECT * FROM califica WHERE no_cta='".$cuentalu."'");
+			$consulta=mysqli_fetch_assoc($resultado);
 			
 			$nalu=$consulta['Nombre'];
+
 				//Comprobar si el usuario existe
 			if ($nalu=="")
 			{
@@ -32,12 +32,12 @@
 			}
 			else {
 					SESSION_start();
-					$_SESSION["nombre"]=$nalu;
-					$_SESSION["id"]=$cualu;
+					$_SESSION["nombre"]=$consulta['Nombre'];
+					$_SESSION["id"]=$consulta['no_cta'];
 				
 					echo "<script>";
 					echo "alert('Bienvenido de Nuevo!');";  
-					echo "window.location = 'index.php';";
+					echo "window.location = 'plan.php';";
 					echo "</script>";						
 					}
 					

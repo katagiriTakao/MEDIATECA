@@ -3,7 +3,7 @@
 
 /*En este php, se accede a los datos de la base de datos, se comprueba el usuario, asi como la contraseña y redirecciona segun el caso a los diferentes mensajes 
 	de error*/	
-	if (isset($_POST["cuenta"]) && isset($_POST['contra'])){
+	if (isset($_POST["cuentaprof"]) && isset($_POST['contraprof'])){
 		//Conexión a la base de datos
 				
 		
@@ -13,10 +13,12 @@
 		}
 		// En caso que la conexion sea exitosa, se mete al programa
 		else{
-			$cuenta=$_POST['cuenta'];
-			$resultado=mysqli_query($conexion, "SELECT * FROM asesor WHERE clave='".$cuenta."';");
+			
+			$contraprof=$_POST['contraprof'];
+			$cuentaprof=$_POST['cuentaprof'];
+			$resultado=mysqli_query($conexion, "SELECT * FROM asesor WHERE clave='".$cuentaprof."'");
 			$consulta=mysqli_fetch_assoc($resultado);
-			$contra=$_POST['contra'];
+		
 			$asesor=$consulta["numet"];	
 			$nasesor=$consulta['nombre'];
 				//Comprobar si el usuario existe
@@ -35,7 +37,7 @@
 				
 					echo "<script>";
 					echo "alert('Bienvenido de Nuevo!');";  
-					echo "window.location = 'index.php';";
+					echo "window.location = 'buzon.php';";
 					echo "</script>";						
 					}
 					

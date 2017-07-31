@@ -68,10 +68,17 @@
 																<li><a href="#test7" target="_blank">REPOSITORIO DE MATERIALES</a></li>
 																<li><a href="../programs/php/videos.php">VIDEOS</a></li>
 																<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
-																<li><a href="#test8">INICIA SESIÓN</a></li>
-															
+																
+																<li><a class="dropdown-button" href="#!" data-activates="dropdown1">INICIA SESIÓN <i class="material-icons right">arrow_drop_down</i></a></li>
+																<!-- Dropdown Structure -->
+																<ul id="dropdown1" class="dropdown-content">
+																  <li><a href="#test8">Alumno</a></li>
+																  <li class="divider"></li>
+																  <li><a href="#test9">Profesor</a></li>
+																</ul>
+																
 														</ul>
-													<ul class="side-nav" id="mobile-demo">
+														<ul class="side-nav" id="mobile-demo">
 															<li><a href="index.html">INICIO</a></li>
 															<li><a href="#test1">¿QUÉ ES LA MEDIATECA?</a></li>
 															<li><a href="#test2">MISIÓN</a></li>
@@ -81,9 +88,16 @@
 															<li><a href="#test7" target="_blank">REPOSITORIO DE MATERIALES</a></li>
 															<li><a href="../programs/php/videos.php">VIDEOS</a></li>
 															<li><a href="http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2012/09/REGLAMENTO-DE-LA-MEDIATECA-2015.pdf" target="_blank">REGLAMENTO</a></li>
-															<li><a href="#test8">INICIA SESIÓN</a></li>
-														
-														</ul>
+															
+															<!--<li><a class="dropdown-button" href="#!" data-activates="dropdown1">INICIA SESIÓN<i class="material-icons right">arrow_drop_down</i></a></li>
+															<!-- Dropdown Structure -->
+															<!--<ul id="dropdown1" class="dropdown-content">
+															  <li><a href="#test8">Alumno</a></li>
+															  <li class="divider"></li>
+															  <li><a href="#test9">Profesor</a></li>
+															</ul>-->
+
+									 					</ul>
 													</div>	
 												</nav>	
 												
@@ -166,7 +180,8 @@
 											</div>
 										</div>
 
-										<!-- Modal inicio de sesion -->
+										<!-- Modal inicio de sesion alumno -->
+
 										<div id="test8" class="modal">
 													<form class="col s12" method="POST" action="../programs/php/inicia-alu.php">
 														<div class="modal-content">
@@ -176,14 +191,43 @@
 															<!--Usuario-->
 																<div class="input-field col s12">
 																	<i class="material-icons prefix">account_circle</i>
-																	<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Escribe un no_cuenta valido"/>
+																	<input id="cuentalu" name="cuentalu" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Escribe un no_cuenta valido"/>
 																	<label for="cuenta" data-error="*Completa correctamente este campo" data-success="¡Bien!">Número de cuenta</label>
 																</div>
 															</div>
 															<!--Contraseña-->
 															<div class="input-field col s12">
 																	<i class="material-icons prefix">vpn_key</i>
-																	<input id="contraseña" name="contra" type="password"/>
+																	<input id="contraseña" name="contralu" type="password"/>
+																	<label for="contraseña" data-error="*Completa correctamente este campo" data-success="¡Bien!">Contraseña</label>
+																</div>
+															</div>
+															<div class="modal-footer">
+																<input id="entrar" type="submit" class="waves-effect waves-cyan btn-flat" value="Iniciar"/>
+															</div>
+													</form>
+												</div>
+
+
+										<!-- Modal inicio de sesion profesor -->		
+
+											<div id="test9" class="modal">
+													<form class="col s12" method="POST" action="../programs/php/inicia-profe.php">
+														<div class="modal-content">
+															<h4>Inicia Sesión</h4>
+															<!--Formularios para iniciar sesión-->
+															<div class="row">
+															<!--Usuario-->
+																<div class="input-field col s12">
+																	<i class="material-icons prefix">account_circle</i>
+																	<input id="cuentaprof" name="cuentaprof" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Escribe tu no_de trabajador valido"/>
+																	<label for="cuenta" data-error="*Completa correctamente este campo" data-success="¡Bien!">Número de trabajador</label>
+																</div>
+															</div>
+															<!--Contraseña-->
+															<div class="input-field col s12">
+																	<i class="material-icons prefix">vpn_key</i>
+																	<input id="contraseña" name="contraprof" type="password"/>
 																	<label for="contraseña" data-error="*Completa correctamente este campo" data-success="¡Bien!">Contraseña</label>
 																</div>
 															</div>
@@ -261,6 +305,9 @@
 												<p id='sept'></p>
 												<p id='oct'></p>
 											</div> 
+											<!--<div class="row">
+												<p id='nov'></p>
+											</div>-->  
 										
 
 										</div>  
@@ -345,6 +392,10 @@
 												  $(".button-collapse").sideNav();
 												  });
 											
+												  $( document ).ready(function(){
+
+												  	$(".dropdown-button").dropdown();
+												  });
 											
 											
 											  function carta(imagen,titulo,enlace){
@@ -355,7 +406,11 @@
                                                                     }
 
                                                                 										
+
+                                                                    									  //var apren = new carta('../resources/images/ima1.jpg','APRENDIZAJE AUTODIRIGIDO','../programs/php/plan.php');
+
                                                                                                           var taller = new carta('../resources/images/talleres.jpg','TALLERES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/04/Programa1.pdf');  
+                                                                                                          
                                                                                                           var audio = new carta('../resources/images/ima3.jpg','AUDIOLIBROS','http://www.mediateca.prepa6.unam.mx/?page_id=239');
 
                                                                                                           var asesor = new carta('../resources/images/ima4.jpg','ASESORES','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2017/05/HORARIO-ASESORES-16-17_020517.pdf');
@@ -377,7 +432,7 @@
                                                                                                           
                                                                                                           var plan =new carta('../resources/images/ima11.png','PLAN DE TRABAJO','http://www.mediateca.prepa6.unam.mx/wp-content/uploads/2016/08/plan-de-trabajo.pdf');
 
-                                                                                                          var buzon =new carta('../resources/images/buzon.jpg','BUZÓN','../programs/php/buzon.php');
+                                                                                                          //var buzon =new carta('../resources/images/buzon.jpg','BUZÓN','../programs/php/buzon.php');
 
 
 
@@ -395,12 +450,14 @@
                                                                 
                                                                 $('#sept').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+certif.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+certif.titu+'</p></div><div class="card-action"><a href="'+certif.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');                        
                                                                 $('#oct').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+beca.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+beca.titu+'</p></div><div class="card-action"><a href="'+beca.accion+'"  class="indigo-text">ENTRA</a></div></div></div></div>');
-                                                               
+                                                             
+                                                                //$('#nov').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+apren.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+apren.titu+'</p></div><div class="card-action"><a href="'+apren.accion+'"  class="indigo-text">ENTRA</a></div></div></div></div>');
+                                                             
                                                                 $('#primerPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+becaProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+becaProf.titu+'</p></div><div class="card-action"><a href="'+becaProf.accion+'" class="indigo-text">ENTRA</a></div></div></div></div>');
                                                                
                                                                 $('#segundoPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+semProf.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+semProf.titu+'</p></div><div class="card-action"><a href="'+semProf.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>'); 
 
-                                                                $('#tercerPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+buzon.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+buzon.titu+'</p></div><div class="card-action"><a href="'+buzon.accion+'"  class="indigo-text">ENTRA</a></div></div></div></div>'); 
+                                                                //$('#tercerPr').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+buzon.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+buzon.titu+'</p></div><div class="card-action"><a href="'+buzon.accion+'"  class="indigo-text">ENTRA</a></div></div></div></div>'); 
 
                                                                 $('#mater').html('<div class="col s12 m6"><div class="card horizontal"><div class="card-image"><img src="'+mater.image+'" height="150px" max-width="250px"></div><div class="card-stacked"><div class="card-content"><p>'+mater.titu+'</p></div><div class="card-action"><a href="'+mater.accion+'" target="blank" class="indigo-text">ENTRA</a></div></div></div></div>');
                                                                 
